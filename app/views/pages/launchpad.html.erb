@@ -1,0 +1,87 @@
+
+<div class="container">
+	<div class="dummy2"></div>
+  <div class="row">
+  <!--
+      <div class="col-md-3 col-sm-4 col-xs-12">
+        <div class="dummy"></div>
+        <a href="#x" class="thumbnail purple animated fadeIn">
+          <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><p>Patient Messages</p>
+        </a>
+      </div>-->
+      <div class="col-md-3 col-sm-4 col-xs-12">
+        <div class="dummy"></div>
+        <a href="/mailbox/inbox" class="thumbnail purple animated fadeIn">
+          <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><p>Messages</p>
+        </a>
+      </div>
+      <div class="col-md-3 col-sm-4 col-xs-12">
+        <div class="dummy"></div>
+        <a href="/assets" class="thumbnail purple animated fadeIn">
+          <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span><p>Documents</p>
+        </a>
+	   </div>
+       <div class="col-md-3 col-sm-4 col-xs-12">
+        <div class="dummy"></div>
+        <a href="/contacts" class="thumbnail purple animated fadeIn">
+          <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span><p>Contacts</p>
+        </a>
+	   </div>
+       <div class="col-md-3 col-sm-4 col-xs-12">
+        <div class="dummy"></div>
+        <a href="/webcast" class="thumbnail purple animated fadeIn">
+          <span class="glyphicon glyphicon-facetime-video" aria-hidden="true"></span><p>Video Call</p>
+        </a>
+      </div>
+      <div class="col-md-3 col-sm-4 col-xs-12">
+        <div class="dummy"></div>
+        <a href="/users/edit" class="thumbnail purple animated fadeIn">
+          <span class="glyphicon glyphicon-user" aria-hidden="true"></span><p>Profile</p>
+        </a>
+      </div>
+      <div class="col-md-3 col-sm-4 col-xs-12">
+        <div class="dummy"></div>
+        <a href="/appointments" class="thumbnail purple animated fadeIn">
+          <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span><p>Appointments</p>
+        </a>
+	   </div>
+  	</div>
+</div>
+
+  <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase-messaging.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.6.3/firebase.js"></script>
+
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBeCK7L0N6njG4RbNSQGyPT14ZvNW57X2E",
+      authDomain: "medimailhub.firebaseapp.com",
+      databaseURL: "https://medimailhub.firebaseio.com",
+      storageBucket: "medimailhub.appspot.com",
+      messagingSenderId: "916203777994"
+    };
+    firebase.initializeApp(config);
+
+    const messaging = firebase.messaging();
+    messaging.requestPermission()
+    .then(function() {
+      console.log("Got Permission")
+      return messaging.getToken();
+
+    })
+    .then(function(token) {
+      console.log(token);
+      window.open("/add_push_session?token="+token,"_self")
+    })
+    .catch(function(err) {
+      console.log("there was an error")
+    })
+
+    // var bigOne = document.getElementById('bigOne');
+    // var dbRef = firebase.database().ref().child('text');
+    // dbRef.on('value',snap => bigOne.innerText = snap.val());
+
+  </script>

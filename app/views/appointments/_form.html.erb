@@ -1,0 +1,57 @@
+
+<%= form_for(@payment, remote: true, :id => "example-form", :html => { :role => "form" }, url: "/appointments/make_payment/#{params[:id]}")do |f| %>
+  <div class = "row"> 
+  <div class="field col-md-10 col-xs-8">
+    <br>
+    <%= f.text_field :card_number, class: 'form-control', placeholder: 'Card number' %>
+  </div>
+
+  <div class="field col-md-2 col-xs-4">
+    <br>
+    <%= f.text_field :card_verification, class: 'form-control', placeholder: 'CVV' %>
+  </div>
+
+  <div class="field col-md-6 col-xs-12">
+    <br> 
+    <%= f.text_field :first_name, class: 'form-control', placeholder: 'First name' %>
+  </div>
+
+
+  <div class="field col-md-6 col-xs-12">
+    <br>
+    <%= f.text_field :last_name, class: 'form-control', placeholder: 'Last name' %>
+  </div>
+
+
+  <div class="col-xs-12">
+  <div class='input-group date' id='datepickerpay' >
+    <br>
+    <%= f.text_field :card_expires_on, class: 'form-control', placeholder: 'Expiration Date (MM-YYYY)' %>
+        <br>
+        <span class="input-group-addon " id = "datecalendar">
+            
+            <span class="glyphicon glyphicon-calendar custom-blue" id = "datecalendaricon"></span>
+        </span>
+  </div>
+  </div>
+
+  <div class="form-group col-xs-8" id = "pay_submit" >
+    <br>
+      <%= f.submit  :class => "btn btn-primary" %>
+  </div>
+  </div> 
+
+<% end %>
+
+<script>
+  $( document ).ready(function() {
+    
+  document.getElementById("pay_submit").onclick = function() {
+      console.log("hi")
+      $( ".new_payment" ).hide();
+      $( ".modal_body" ).append('<div class="loader"></div>');
+  }
+});
+
+
+</script>

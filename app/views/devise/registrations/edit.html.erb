@@ -1,0 +1,106 @@
+<!-- <h2>Edit <%= resource_name.to_s.humanize %></h2>-->
+<br>
+<%= render 'layouts/error_messages', object: resource %>
+<center><h2>Edit Your Profile</h2></center>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <!--<%= devise_error_messages! %>-->
+
+  <div class="field">
+    <%= f.label :email, 'Email Id' %><br />
+    <%= f.email_field :email, class: 'form-control' %>
+  </div>
+
+  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+  <% end %>
+
+  <br>
+  <div class="field">
+    <%= f.label :first_name, 'First Name' %><br />
+    <%= f.text_field :first_name, class: 'form-control' %>
+  </div>
+
+  <br>
+  <div class="field">
+    <%= f.label :last_name, 'Last Name' %><br />
+    <%= f.text_field :last_name, class: 'form-control' %>
+  </div>
+
+  <br>
+  <div class="field">
+    <%= f.label :phone_one, "Primary Phone number" %><br />
+    <%= f.telephone_field :phone_one,class: 'form-control' %>
+  </div>
+
+  <br>
+  <div class="field">
+    <%= f.label :phone_two , 'Secondary Phone number'%><br />
+    <%= f.telephone_field :phone_two,class: 'form-control' %>
+  </div>
+  
+  <br>
+  <div class="field">
+    <%= f.label :d_o_b, "Date of Birth" %><br />
+    <!--<%= f.date_select :d_o_b, options={:start_year => Date.today.year - 85, :end_year => Date.today.year } %> -->
+    <%= f.text_field :d_o_b, :class => 'datepicker form-control' %>
+  </div>
+
+  <br>
+  <div class="field">
+    <%= f.label :location, "City" %><br />
+    <%= f.text_field :location, class: 'form-control' %>
+  </div>
+
+  <br>
+  <div class='row'>
+<!-- <div class="col-md-1 col-xs-3"><%= radio_button_tag(:gender, :male) %><%= label_tag(:gender, "Male") %></div>
+  <div class="col-md-11 col-xs-6"><%= radio_button_tag(:gender, :female) %><%= label_tag(:gender, "Female") %></div> -->
+    <div class="col-md-1 col-xs-3"><%= f.radio_button(:gender, :male) %><%= label_tag(:gender, "Male") %></div>
+    <div class="col-md-11 col-xs-6"><%= f.radio_button(:gender, :female) %><%= label_tag(:gender, "Female") %></div>
+  </div>
+  
+  <div class='row'>
+    <div class="col-md-1 col-xs-3"><%= f.radio_button(:role, :doctor) %><%= label_tag(:role, "Doctor") %></div>
+    <div class="col-md-11 col-xs-6"><%= f.radio_button(:role, :patient) %><%= label_tag(:role, "Patient") %></div>
+  </div> 
+
+  <br>
+  <div classs="field">
+    <%= f.label :specialization, "Specialization" %><br />
+    <%= f.text_field :specialization, class: 'form-control' %>
+  </div>
+
+  <br>
+  <div class="field">
+    <%= f.label :password, 'New Password' %><br />
+    <%= f.password_field :password, autocomplete: "off",placeholder: 'leave blank if you do not want to change it', class: 'form-control' %>
+    <% if @minimum_password_length %>
+      <!--<br />
+      <em><%= @minimum_password_length %> characters minimum</em>-->
+    <% end %>
+  </div>
+
+  <br>
+  <div class="field">    
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off",class: 'form-control' %>
+  </div>
+
+  <br>
+  <div class="field">
+    <%= f.label :current_password, 'Current Password' %><br />
+    <%= f.password_field :current_password, autocomplete: "off",placeholder: 'we need your current password to confirm your changes', class: 'form-control' %>
+  </div>
+
+  <center>
+  <br>
+  <div class="actions">
+    <%= f.submit "Update", class:'btn btn-large btn-primary ' %>
+  </div>
+  </center>
+
+<% end %>
+
+<small><%= link_to "cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete  %></small>
+
+<!--<%= link_to "Back", :back %>-->

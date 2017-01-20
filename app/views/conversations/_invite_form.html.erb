@@ -1,0 +1,36 @@
+
+<div class="modal fade"
+           id="invite_form" tabindex="-1" role="dialog" 
+           aria-labelledby="myModalLabel"
+           aria-hidden="true" 
+           data-backdrop="false" 
+           data-keyboard="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" 
+                data-dismiss="modal" 
+                aria-label="Close">
+                <span aria-hidden="true">&times;</span></button>
+        <h3 class="modal-title custom-blue"><i class=' glyphicon glyphicon-envelope custom-blue'></i>&nbsp;&nbsp;Contact hasn't signed up to Medimail</h3>
+      </div>
+    <div class="modal-body">Would you like to invite him/her to use this app?
+      <br>
+      <br>
+      <%= form_tag :invite do %>
+
+      <!-- <%= label_tag(:email, "Email") %> -->
+      <%= email_field_tag :email, nil, class: 'form-control', placeholder: 'Email'%>
+      <br>
+      <!-- <%= label_tag(:invitee, "Name") %> --> 
+      <%= text_field_tag  :invitee, nil,class: 'form-control', placeholder: 'Name' %>
+      
+    </div>
+     <div class="modal-footer">
+        <%= submit_tag  "Invite", class: "btn btn-primary" %>
+        <% end %>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">No</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

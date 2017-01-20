@@ -1,0 +1,59 @@
+<br>
+<br>
+<table class="dtable display responsive nowrap" cellspacing="0" width="100%">
+<!-- 	<col width="30%">
+	<col width="20%">
+	<col width="20%">
+	<col width="10%">
+	<col width="10%">
+	<col width="10%"> -->	
+<thead>	
+	<!-- Header -->
+	<tr class = "header">
+		<th> Name </th>
+		<th> Location </th>
+		<th> Date of Birth </th>
+		<th> Message </th>
+		<th> Call </th>
+		<th> Delete </th>
+		<th> Appointment </th>
+	</tr>
+</thead>
+	<!-- Body -->
+	<tbody>
+		<% @contacts_patients.each do |contact| %>
+		<tr>
+			<!-- Name -->
+			<td><%= "#{contact.first_name} #{contact.last_name}" %></td>
+			<td><%= "#{contact.location}" %></td>
+			<td><%= "#{contact.d_o_b.strftime('%m-%d-%Y')}" %></td>
+			<!-- Buttons -->
+			<td>
+				<%=  link_to mail_session_path(contact), class: "btn btn-primary " do %>
+    				<span class="glyphicon glyphicon-envelope "></span><span style="font-size: 0;">message</span>
+				<% end %>
+			</td>
+			<td>
+				<%= link_to create_session_path(contact), class: "btn btn-primary " do %>
+    				<span class="glyphicon glyphicon-facetime-video"></span><span style="font-size: 0;">call</span>
+				<% end %>
+			</td>
+			<td>	
+				<%= link_to delete_contact_path(contact), class: "btn btn-primary " do %>
+    				<span class="glyphicon glyphicon-trash "></span><span style="font-size: 0;">delete</span>
+				<% end %>
+			</td>
+
+			<td>	
+				<%= link_to  create_appointment_path(contact),:method => "post", remote: true, :class => 'btn btn-primary' do%>
+				<span class="glyphicon glyphicon-calendar "><span style="font-size: 0;">appointment</span></span>
+
+				<% end %>
+    
+			</td>
+
+		</tr>
+		<%end%>
+	</tbody>	
+</table>
+&nbsp;&nbsp;&nbsp;

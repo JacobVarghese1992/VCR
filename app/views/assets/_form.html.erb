@@ -1,0 +1,50 @@
+<%= form_for @asset, :html => {:multipart => true} do |f| %> 
+ <% if @asset.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@asset.errors.count, "error") %> prohibited this asset from being saved:</h2>
+
+      <ul>
+      <% @asset.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %> 
+  
+   <p> 
+    <br>
+    <br>
+  <div class="row">
+    <div class="col-md-9 col-xs-9">
+        <div class="input-group">
+      <label class="input-group-btn">
+        <span class="btn btn-primary btn-file">
+        <!--Add attachment <%= f.file_field :uploaded_file, style: "display: none;"%> -->
+        Add attachment <%= f.file_field :uploaded_file%> 
+        </span>
+      </label>
+      <input type="text" id="attachment-text" class="form-control" readonly="">
+    </div>
+  </div>
+       <!-- <%= f.label :uploaded_file, "File" %><br /> -->
+       <!-- <%= f.file_field :uploaded_file , class: 'form-control'%> -->
+     
+     <div class="col-md-3 col-xs-3">
+       <%= f.hidden_field :folder_id %> 
+ <%= f.submit "Upload", class:'btn btn-large btn-primary ' %></p> 
+</div>
+</div>
+<% end %>
+    
+
+<script>
+$(document).on('change', ':file', function() {
+    var input = $(this),
+        numFiles = input.get(0).files ? input.get(0).files.length : 1,
+        label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+    input.trigger('fileselect', [numFiles, label]);
+    console.log(numFiles);
+    console.log(label);
+    document.getElementById("attachment-text").value = label;
+});
+</script>    

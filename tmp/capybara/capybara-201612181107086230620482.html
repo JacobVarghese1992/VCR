@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta name="google-site-verification" content="PEoGJEnOzIxEhfcpIzK3_Zzzj8ORVNuKKujivR5Q5_Q" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <title>MedimailHub</title>
+    
+    <link rel="stylesheet" media="all" href="/pipeline_assets/application-1d0817edc4ec32e6b472aa1061d497366fe70254ac8ed76d3e64719e5636b96b.css" data-turbolinks-track="reload" />
+    <script src="/pipeline_assets/application-065a93d7dd3c074f464d4823423cc63587300dfa9b9adfdc4764bac490d0e24d.js" data-turbolinks-track="reload"></script>
+    <script src="//static.opentok.com/webrtc/v2.2/js/TB.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+    
+<title>MedimailHub |Untitled</title> 
+    
+   
+  
+
+
+  </head>
+
+  <body>
+
+
+  	 <nav class="navbar navbar-default navbar-fixed-top">
+  <!-- <div class="container-fluid"> -->
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/launchpad"><MAP>
+        <img alt="Brand" src="/logo.png" style="height:42px; margin-bottom: 5px;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspMedimail Hub</MAP></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+<!--       <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+      </ul> -->
+<!--       <form class="navbar-form navbar-left">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form> -->
+      <ul class="nav navbar-nav navbar-right">
+        <!-- <li><a href="#">Link</a></li> -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">username@example.com<span class="caret"></span></a>
+          <ul class="dropdown-menu dropdown-menu-custom">
+            <li><a class="class-white class-hover" href="/users/edit">Edit Profile</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a class="class-white class-hover" rel="nofollow" data-method="delete" href="/users/sign_out">Log Out</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+    <br><br><br>
+    <div class='container animated fadeIn' id='cont'>
+      <!--<span class="notice">Successfully created folder.</span>-->
+      <!--<span class="alert"></span>-->
+      
+   <br>
+   <br>
+
+  <div class="alert alert-notice">
+    <a href="#" data-dismiss="alert" class="close">×</a>
+    <ul>
+      <li>
+        Successfully created folder.
+      </li>
+    </ul>
+  </div>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  setTimeout(function(){
+    $('.alert').fadeOut();
+  }, 2000);
+ })
+</script>
+
+
+      <h1 id="bigOne"></h1>
+      <!-- <p id="notice">Successfully created folder.</p> -->
+<!-- <link rel="stylesheet" media="screen" href="/pipeline_assets/assets-275947672193d715f8c25e4455dc286526727c95725f8068b7dfddec0df42dc4.css" /> -->
+<!-- <h1>Assets</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  </tbody>
+</table>
+
+<br>
+
+<a href="/assets/new">New Asset</a>
+ -->
+<!-- <h1>Assets</h1> 
+<table> 
+  <tr> 
+    <th>Uploaded Files</th> 
+  </tr> 
+</table> 
+<p><a href="/assets/new">New Asset</a></p> -->
+</br>
+
+<!-- </ul> -->
+
+    <!-- </div> -->
+    <div class="row">
+      <div class="col-md-9 col-xs-12">
+    <!-- <div class="breadcrumbs">          -->
+        <i class="fa fa-home fa-3x" aria-hidden="true" style="color: #6fadf3;"></i>
+<!-- </div> -->
+    </div>
+       <div class="col-md-1 col-xs-3">
+       <a class="btn btn-primary " href="/assets/new">Upload</a>
+       <br>
+     </div>
+     <div class="col-md-1 col-xs-9">
+       <a class="btn btn-primary " href="/folders/new">New Folder</a> 
+     </div>
+    </br>
+    <br>
+  </div>
+  <br>
+
+<div class="table-responsive">
+  <table class="table">  
+    <tr>
+      <th>Name</th> 
+      
+      <th>Size</th>
+      
+      <th>Modified</th> 
+      <th></th>
+      <th></th> 
+      <th></th> 
+    </tr>
+ 
+
+ 
+<!-- Listing Shared Folders (the folders shared by others) -->
+
+
+
+
+  
+    <!-- Listing Folders -->
+  <tr>
+    <td> <i class="fa fa-folder " aria-hidden="true" style="color: #6fadf3;"></i> <a style="color: black;" href="/browse/1">new_folder</a> </td>
+  
+    <td>-</td>
+  
+
+    <td>-</td> 
+  
+    <td>
+      <div class="share">
+        <a folder_id="1" folder_name="new_folder" href="#">Share</a> 
+      </div>
+    </td> 
+                
+    <td><a href="/browse/1/rename">Rename</a></td> 
+                 
+    <td><a rel="nofollow" data-method="delete" href="/folders/1">Delete</a></td>
+  </tr>
+
+
+
+
+  
+   <!-- Listing Files -->
+  </table>
+</div>
+
+<div id="invitation_form" title="Invite others to share" style="display:none">
+
+    <form action="/assets/share" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" />  
+
+    <select name="people[]" id="recipients" multiple="multiple" class="form-control js-example-basic-multiple" placeholder="Share with ..."></select>
+
+
+    
+    <br>
+
+            <input type="hidden" name="folder_id" id="folder_id" />
+</form>
+    <script type="text/javascript">
+var $exampleMulti = $(".js-example-basic-multiple").select2({tags: true});
+$exampleMulti.select2('val', []);
+$(".js-example-basic-multiple").on('select2:select', function (e) { 
+    //var selected_element = $(e.currentTarget);
+    //var select_val = selected_element.val().pop();
+    //console.log(parseInt(select_val),selected_element.val())
+
+  new_val=$.grep($(".js-example-basic-multiple").select2('val'), function (value) {
+    if (!(isNaN(parseInt(value)))){
+      return true;
+    }
+    
+  });
+  
+  //$(".js-example-basic-multiple").select2('data', new_data);
+  $exampleMulti.val(new_val).trigger("change")
+
+    //if(isNaN(parseInt(select_val))){
+     //   $('#invite_form').modal("show");
+      //  $(".js-example-basic-multiple").select2('val',selected_element.val());
+      //}
+
+});
+</script>
+
+
+
+</div>
+
+<script>
+$( document ).ready(function () {  
+    //open the invitation form when a share button is clicked 
+    $( ".share a" ) 
+            .click(function() { 
+                //assign this specific Share link element into a variable called "a" 
+                var a = this; 
+                  
+                //First, set the title of the Dialog box to display the folder name 
+                $("#invitation_form").attr("title", "Share '" + $(a).attr("folder_name") + "' with others" ); 
+                  
+                //a hack to display the different folder names correctly 
+                $("#ui-dialog-title-invitation_form").text("Share '" + $(a).attr("folder_name") + "' with others");  
+                  
+                //then put the folder_id of the Share link into the hidden field "folder_id" of the invite form 
+                $("#folder_id").val($(a).attr("folder_id")); 
+                  
+                //Add the dialog box loading here
+                //the dialog box customization 
+$( "#invitation_form" ).dialog({ 
+    height: 160, 
+    width: 400, 
+    modal: true, 
+    buttons: { 
+        //First button 
+        "Share": function() { 
+            //get the url to post the form data to 
+            var post_url = $("#invitation_form form").attr("action"); 
+              
+            //serialize the form data and post it the url with ajax 
+            $.post(post_url,$("#invitation_form form").serialize(), null, "script"); 
+              
+            return false; 
+        }, 
+        //Second button 
+        Cancel: function() { 
+            $( this ).dialog( "close" ); 
+        } 
+    }, 
+    close: function() { 
+  
+    } 
+}); 
+                  
+                return false; 
+            }); 
+});
+
+  
+
+</script>
+
+
+    </div>
+
+  <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase-messaging.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.6.3/firebase.js"></script>
+
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBeCK7L0N6njG4RbNSQGyPT14ZvNW57X2E",
+      authDomain: "medimailhub.firebaseapp.com",
+      databaseURL: "https://medimailhub.firebaseio.com",
+      storageBucket: "medimailhub.appspot.com",
+      messagingSenderId: "916203777994"
+    };
+    firebase.initializeApp(config);
+
+    const messaging2 = firebase.messaging();
+
+    messaging2.onMessage(function(payload) {
+
+      msg = "<br><br><div class=\"alert alert-notice\"><a href=\"#\" data-dismiss=\"alert\" class=\"close\">×</a><ul id=\"test\"><li>"+payload.notification.body+"</li></ul></div>";
+    document.getElementById('cont').innerHTML = msg + document.getElementById('cont').innerHTML;
+    })
+
+
+
+    // var bigOne = document.getElementById('bigOne');
+    // var dbRef = firebase.database().ref().child('text');
+    // dbRef.on('value',snap => bigOne.innerText = snap.val());
+
+  </script>
+
+
+  </body>
+
+</html>
+
+
+

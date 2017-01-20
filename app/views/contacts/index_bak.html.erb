@@ -1,0 +1,37 @@
+
+<div class="row">
+
+<!-- List all users to be added	 -->
+<div class="col-sm-6 col-xs-12 ">
+	<% if current_user.role != "patient" %>	
+		<div class= "panel">
+			<%= render '/contacts/all_contacts_doctor' %>
+			<br>
+		</div>
+	<% else %>
+		<div class= "panel">
+			<%= render '/contacts/all_contacts_patient' %>
+			<br>
+		</div>	
+		<small style="color:grey;"> Please request your Physicians to add you to their contacts </small>
+	<% end %>	
+</div>
+
+<!-- List existing contacts -->
+<div class="col-sm-6 col-xs-12 panel">
+	<% if current_user.role != "patient" %>	
+	<%= render '/contacts/all_users' %>
+	<% end %>
+	<br>
+</div>
+
+</div>	
+
+<!-- Responsive Datatable -->
+<script>
+$(document).ready(function() {
+	$('.dtable').dataTable({
+  responsive: true
+});
+});
+</script>

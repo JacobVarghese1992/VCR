@@ -1,0 +1,261 @@
+<!-- <p id="notice"><%= notice %></p> -->
+<!-- <%= stylesheet_link_tag "assets"%> -->
+<!-- <h1>Assets</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @assets.each do |asset| %>
+      <tr>
+        <td><%= asset.user_id %></td>
+        <td><%= link_to 'Show', asset %></td>
+        <td><%= link_to 'Edit', edit_asset_path(asset) %></td>
+        <td><%= link_to 'Destroy', asset, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Asset', new_asset_path %>
+ -->
+<!-- <h1>Assets</h1> 
+<table> 
+  <tr> 
+    <th>Uploaded Files</th> 
+  </tr> 
+  <% for asset in @assets %> 
+    <tr> 
+      <td><%= link_to asset.file_name, download_url(asset) %></td> 
+      <td><%= link_to "Show", asset %></td> 
+      <td><%= link_to "Edit", edit_asset_path(asset) %></td> 
+      <td><%= link_to 'Destroy', asset, method: :delete, data: { confirm: 'Are you sure?' } %></td> 
+    </tr> 
+  <% end %> 
+</table> 
+<p><%= link_to "New Asset", new_asset_path %></p> -->
+</br>
+
+<!-- </ul> -->
+
+    <!-- </div> -->
+<% unless @is_this_folder_being_shared %> 
+    <div class="row">
+      <div class="col-md-9 col-xs-12">
+    <%= render :partial => "breadcrumbs" %>
+    </div>
+      <% if @current_folder %> 
+      <div class="col-md-1 col-xs-12">
+       <%= link_to "Upload", new_sub_file_path(@current_folder), class: "btn btn-primary " %>
+       <br>
+       </div>
+       <div class="col-md-1 col-xs-12">
+       <%= link_to "New Folder", new_sub_folder_path(@current_folder), class: "btn btn-primary " %> 
+       </div>
+   <% else %> 
+       <div class="col-md-1 col-xs-3">
+       <%= link_to "Upload", new_asset_path, class: "btn btn-primary " %>
+       <br>
+     </div>
+     <div class="col-md-1 col-xs-9">
+       <%= link_to "New Folder", new_folder_path, class: "btn btn-primary " %> 
+     </div>
+   <% end %> 
+    </br>
+    <br>
+  </div>
+  <br>
+ <% else %> 
+    <h3>This folder is being shared to you by a user</h3> 
+<% end %>
+
+<div class="table-responsive">
+  <table class="table">  
+    <tr>
+      <th>Name</th> 
+      
+      <th>Size</th>
+      
+      <th>Modified</th> 
+      <th></th>
+      <th></th> 
+      <th></th> 
+    </tr>
+ 
+
+ 
+<!-- Listing Shared Folders (the folders shared by others) -->
+<% @being_shared_folders.each do |folder| %> 
+  <tr>
+  <td> <i class="fa fa-folder " aria-hidden="true" style="color: #6fadf3;"></i> <%= link_to folder.name, browse_path(folder) , style: "color: black;"%> </td>
+
+  <td>-</td>
+  
+
+  <td>-</td>
+
+  <td> </td>
+  <td> </td>
+  <td> </td>
+</tr>
+     
+<% end %> 
+
+
+
+
+  
+    <!-- Listing Folders -->
+<% @folders.each do |folder| %> 
+  <tr>
+    <td> <i class="fa fa-folder " aria-hidden="true" style="color: #6fadf3;"></i> <%= link_to folder.name, browse_path(folder) , style: "color: black;"%> </td>
+  
+    <td>-</td>
+  
+
+    <td>-</td> 
+  
+    <td>
+      <div class="share">
+        <%= link_to "Share", "#", :folder_id => folder.id, :folder_name => folder.name unless @is_this_folder_being_shared %> 
+      </div>
+    </td> 
+                
+    <td><%= link_to "Rename", rename_folder_path(folder) unless @is_this_folder_being_shared %></td> 
+                 
+    <td><%= link_to "Delete", folder, method: :delete  unless @is_this_folder_being_shared %></td>
+  </tr>
+
+<% end %>
+
+
+
+  
+   <!-- Listing Files -->
+    <% @assets.each do |asset| %> 
+    <tr>
+      <td> <i class="fa fa-file" aria-hidden="true" style="color: #6fadf3;"></i> <%= link_to asset.file_name, download_url(asset), style: "color: black;" %></td> 
+  
+      <td><%= number_to_human_size(asset.file_size, :precision => 2) %></td> 
+  
+      <td><%= asset.uploaded_file_updated_at %></td> 
+               
+      <td><%= link_to "Download", download_url(asset) %></td>
+
+      <td><%= link_to "Delete", asset, method: :delete %></td>
+      <td></td>
+    </tr>
+         
+  <% end %>
+  </table>
+</div>
+
+<div id="invitation_form" title="Invite others to share" style="display:none">
+
+    <%= form_tag '/assets/share' do  %>  
+
+    <% users = [] %>
+    <% current_user.contacts.each do |uu|%>
+        <% u = User.new %>
+        <% u.id = uu.id %>
+        <% u.first_name = "#{uu.first_name} #{uu.last_name}" %>
+        <% users << u %>
+    <% end %>
+    <%= select_tag "people", options_from_collection_for_select(users,"id",:first_name ), multiple: true, class: 'form-control js-example-basic-multiple',id: "recipients", placeholder: "Share with ..."%>
+
+
+    
+    <br>
+
+            <%= hidden_field_tag "folder_id" %>
+    <% end %>  
+
+    <script type="text/javascript">
+var $exampleMulti = $(".js-example-basic-multiple").select2({tags: true});
+$exampleMulti.select2('val', [<%= (params[:recp])? params[:recp]:"" %>]);
+$(".js-example-basic-multiple").on('select2:select', function (e) { 
+    //var selected_element = $(e.currentTarget);
+    //var select_val = selected_element.val().pop();
+    //console.log(parseInt(select_val),selected_element.val())
+
+  new_val=$.grep($(".js-example-basic-multiple").select2('val'), function (value) {
+    if (!(isNaN(parseInt(value)))){
+      return true;
+    }
+    
+  });
+  
+  //$(".js-example-basic-multiple").select2('data', new_data);
+  $exampleMulti.val(new_val).trigger("change")
+
+    //if(isNaN(parseInt(select_val))){
+     //   $('#invite_form').modal("show");
+      //  $(".js-example-basic-multiple").select2('val',selected_element.val());
+      //}
+
+});
+</script>
+
+
+
+</div>
+
+<script>
+$( document ).ready(function () {  
+    //open the invitation form when a share button is clicked 
+    $( ".share a" ) 
+            .click(function() { 
+                //assign this specific Share link element into a variable called "a" 
+                var a = this; 
+                  
+                //First, set the title of the Dialog box to display the folder name 
+                $("#invitation_form").attr("title", "Share '" + $(a).attr("folder_name") + "' with others" ); 
+                  
+                //a hack to display the different folder names correctly 
+                $("#ui-dialog-title-invitation_form").text("Share '" + $(a).attr("folder_name") + "' with others");  
+                  
+                //then put the folder_id of the Share link into the hidden field "folder_id" of the invite form 
+                $("#folder_id").val($(a).attr("folder_id")); 
+                  
+                //Add the dialog box loading here
+                //the dialog box customization 
+$( "#invitation_form" ).dialog({ 
+    height: 160, 
+    width: 400, 
+    modal: true, 
+    buttons: { 
+        //First button 
+        "Share": function() { 
+            //get the url to post the form data to 
+            var post_url = $("#invitation_form form").attr("action"); 
+              
+            //serialize the form data and post it the url with ajax 
+            $.post(post_url,$("#invitation_form form").serialize(), null, "script"); 
+              
+            return false; 
+        }, 
+        //Second button 
+        Cancel: function() { 
+            $( this ).dialog( "close" ); 
+        } 
+    }, 
+    close: function() { 
+  
+    } 
+}); 
+                  
+                return false; 
+            }); 
+});
+
+  
+
+</script>
+

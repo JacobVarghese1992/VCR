@@ -1,0 +1,14 @@
+<!-- <div class="breadcrumbs">          -->
+    <% if @current_folder #checking if we are under any folder %> 
+        
+        <%=  link_to '/assets' do %>
+        <i class="fa fa-home fa-3x" aria-hidden="true"></i>
+        <%end%> 
+        <% @current_folder.ancestors.reverse.each do |folder| %> 
+            » <%= link_to folder.name, browse_path(folder) %> 
+        <% end %> 
+         »  <%= @current_folder.name %> 
+    <% else #if we are not under any folder%> 
+        <i class="fa fa-home fa-3x" aria-hidden="true" style="color: #6fadf3;"></i>
+    <% end %> 
+<!-- </div> -->

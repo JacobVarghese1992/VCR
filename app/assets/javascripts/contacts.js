@@ -1,0 +1,4 @@
+
+$('#contacts').dataTable({
+  responsive: true
+});

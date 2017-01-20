@@ -1,0 +1,23 @@
+<div class="media">
+  <!--
+  <div class="media-left">
+    <a href="#">
+      <img class="media-object" src="http://placehold.it/64x64" alt="...">
+    </a>
+  </div> -->
+  <div class="media-body panel">
+    <h4 class="media-heading">
+      <% if User.find(conversation.originator.id).role=="doctor" %>
+        <b>From: </b><%= conversation.originator.first_name+" "+conversation.originator.last_name%>
+      <% else %>
+        <b>From: </b><%= conversation.originator.first_name+" "+conversation.originator.last_name%>
+      <% end%> <br>
+      <b>To:</b> <%=conversation.recipients.select{|r| r!=conversation.originator}.map{|r| r.first_name+" "+r.last_name }.join(", ") %><br>
+      <small><b>Subject: </b><%= conversation.subject %></small><br>
+      <small><b>Date: </b><%=  conversation.messages.last.created_at.strftime("%A, %b %d, %Y at %I:%M%p") %></small>
+    </h4>
+    <%= link_to "View Message", conversation_path(conversation)  %> <br>
+    <%= truncate conversation.messages.last.body, length: 145 %>
+    
+  </div>
+</div>

@@ -1,0 +1,79 @@
+<%= form_for :conversation, url: :conversations, html: { :multipart => true  } do |f| %>
+
+  <div class="form-group">
+    <%= f.label :recipients %>
+    <% if current_user.role=='patient'%>
+      <%= f.select(:recipients, current_user.contacts.map {|p| [ p.first_name+" "+p.last_name, p.id ] }, {}, { multiple: true , class: "js-example-basic-multiple form-control",id: "recipients",  :required => true })%>
+    <%else%>
+      <%= f.select(:recipients, User.all.collect {|p| [ p.first_name+" "+p.last_name, p.id ] }, {}, { multiple: true , class: "js-example-basic-multiple form-control",id: "recipients",  :required => true })%>
+    <%end%>
+  </div>
+  <div class="form-group">
+    <%= f.label :subject %>
+    <%= f.text_field :subject, placeholder: "Subject", class: "form-control",id:"subject",:required => true %>
+  </div>
+  <div class="form-group">
+    <%= f.label :message %>
+    <%= f.text_area :body, class: 'form-control',placeholder: "Type your message here", id:"message",rows: 4,:required => true  %>
+    
+  </div>
+  <div class="row">
+    <div class="col-md-9 col-xs-12">
+    <div class="input-group">
+      <label class="input-group-btn">
+        <span class="btn btn-primary btn-darkblue btn-file">
+        Add attachment <%= f.file_field :attachment, style: "display: none;"%>  
+        </span>
+      </label>
+      <input type="text" id="attachment-text" class="form-control" readonly="">
+    </div> 
+    <br>
+    </div> 
+    
+    <div class="col-md-3 col-xs-12">
+    <%= f.submit "Send Message", class: "btn btn-primary btn-darkblue" %>
+    </div>
+  </div>
+<% end %>
+<%= render partial: 'invite_form' %>
+
+<script type="text/javascript">
+var $exampleMulti = $(".js-example-basic-multiple").select2({tags: true});
+$exampleMulti.select2('val', [<%= (params[:recp])? params[:recp]:"" %>]);
+$(".js-example-basic-multiple").on('select2:select', function (e) { 
+    //var selected_element = $(e.currentTarget);
+    //var select_val = selected_element.val().pop();
+    //console.log(parseInt(select_val),selected_element.val())
+
+  new_val=$.grep($(".js-example-basic-multiple").select2('val'), function (value) {
+    if (!(isNaN(parseInt(value)))){
+      return true;
+    }
+    else{
+      $("#invite_form").modal("show");
+      return false;
+    }
+  });
+  
+  //$(".js-example-basic-multiple").select2('data', new_data);
+  $exampleMulti.val(new_val).trigger("change")
+
+    //if(isNaN(parseInt(select_val))){
+     //   $('#invite_form').modal("show");
+      //  $(".js-example-basic-multiple").select2('val',selected_element.val());
+      //}
+
+});
+</script>
+
+<script>
+$(document).on('change', ':file', function() {
+    var input = $(this),
+        numFiles = input.get(0).files ? input.get(0).files.length : 1,
+        label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+    input.trigger('fileselect', [numFiles, label]);
+    console.log(numFiles);
+    console.log(label);
+    document.getElementById("attachment-text").value = label;
+});
+</script>

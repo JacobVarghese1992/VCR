@@ -1,0 +1,72 @@
+<br>
+<br>
+<table class="dtable display responsive nowrap" cellspacing="0" width="100%">
+<!-- 	<col width="30%">
+	<col width="20%">
+	<col width="20%">
+	<col width="10%">
+	<col width="10%">
+	<col width="10%">	 -->
+<thead>	
+	<!-- Header -->
+	<tr class = "header">
+		<th> Name </th>
+		<th> Location </th>
+		<th> Specialization </th>
+		<th> Message </th>
+		<% if current_user.role != "patient" %>
+			<th> Call </th>
+		<% end %>	
+		
+		<th> Delete </th>
+
+		<% if current_user.role != "patient" %>
+			<th> Appointment </th>
+		<% end %>
+			
+	</tr>
+</thead>
+	<!-- Body -->
+	<tbody>
+		<% @contacts_physicians.each do |contact| %>
+		<tr>
+			<!-- Name -->
+			<td><%= "#{contact.first_name} #{contact.last_name}" %></td>
+			<td><%= "#{contact.location}" %></td>
+			<td><%= "#{contact.specialization}" %></td>
+			<!-- Buttons -->
+			<td>
+				<%=  link_to mail_session_path(contact), class: "btn btn-primary " do %>
+    				<span class="glyphicon glyphicon-envelope "></span>
+				<% end %>
+			</td>
+
+			<% if current_user.role != "patient" %>
+			<td>
+				<%= link_to create_session_path(contact), class: "btn btn-primary " do %>
+    				<span class="glyphicon glyphicon-facetime-video"></span>
+				<% end %>
+			</td>
+			<% end %>
+
+
+			<td>	
+				<%= link_to delete_contact_path(contact), class: "btn btn-primary " do %>
+    				<span class="glyphicon glyphicon-trash "></span>
+				<% end %>
+			</td>
+
+			<% if current_user.role != "patient" %>	
+			<td>	
+				<%= link_to  create_appointment_path(contact),:method => "post", remote: true, :class => 'btn btn-primary' do%>
+				<span class="glyphicon glyphicon-calendar "></span>
+
+				<% end %>
+    
+			</td>
+			<% end %>
+		</tr>
+		<%end%>
+	</tbody>	
+</table>
+

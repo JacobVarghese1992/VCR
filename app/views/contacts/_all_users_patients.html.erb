@@ -1,0 +1,35 @@
+<br>
+<br>
+<table class="dtable display responsive" cellspacing="0" width="100%">
+<!-- 	<col width="30%">
+	<col width="30%">
+	<col width="30%">
+	<col width="10%"> -->	
+<thead>	
+	<!-- Header -->
+	<tr class = "header">
+		<th> Name </th>
+		<th> Location </th>
+		<th> Date of Birth </th>
+		<th> Add Contact</th>
+	</tr>
+</thead>
+	<!-- Body -->
+	<tbody>
+		<% @users_patients.each do |contact| %>
+		<tr>
+			<!-- Name -->
+			<td><%= "#{contact.first_name} #{contact.last_name}" %></td>
+			<td><%= "#{contact.location}" %></td>
+			<td><%= "#{contact.d_o_b.strftime('%m-%d-%Y')}" %></td>
+			<!-- Buttons -->
+			<td class = "actions">
+				<%= link_to edit_contact_path(contact.id), class: "btn btn-primary " do %>
+    				<span class="glyphicon glyphicon-plus "></span>
+				<% end %>
+			</td>	
+		</tr>
+		<%end%>
+	</tbody>	
+</table>
+

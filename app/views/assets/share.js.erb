@@ -1,0 +1,24 @@
+//closing the dialog box 
+$("#invitation_form").dialog("close"); 
+  
+//making sure we don't display the flash notice more than once 
+$("#flash_notice").remove(); 
+  
+//showing a flash message 
+$("#container").prepend("<div id='flash_notice'>Successfully shared the folder</div>");
+
+// //Removing the css class 'folder' 
+// $("#folder_<%= params[:folder_id] %>").removeClass("folder"); 
+  
+// //Adding the css class 'shared_folder' 
+// $("#folder_<%= params[:folder_id] %>").addClass("shared_folder");
+
+msg = "<br><br><div class=\"alert alert-notice\"><a href=\"#\" data-dismiss=\"alert\" class=\"close\">×</a><ul id=\"test\"><li>Folder successfully shared</li></ul></div>";
+document.getElementById('cont').innerHTML = msg + document.getElementById('cont').innerHTML;
+
+$(document).ready(function(){
+  setTimeout(function(){
+    $('.alert').fadeOut();
+  }, 2000);
+ })
+

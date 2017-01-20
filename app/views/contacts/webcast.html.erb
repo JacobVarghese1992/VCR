@@ -1,0 +1,51 @@
+<script type="text/javascript">
+        var apiKey = '<%= API_OPENTOK[:key] %>';
+        var sessionId = '<%= @session_id %>';
+        var token = '<%= @token %>';
+</script>
+
+<script src="/js/webcast.js"></script>
+    <br>
+    <div id="subscribers" style="height: 100vh; width: 100%;" ></div>
+    <br>
+    <div id="publisher"></div>
+    <div class="web-buttons row">
+        <div class="col-md-4 col-xs-2"></div>    
+        <div class="col-md-2 col-xs-3"><button id="mute_audio" type="button" class="btn btn-circle btn-lg white-button"><span class="glyphicon glyphicon-volume-up"></span></button></div>
+        <div class="col-md-2 col-xs-3"><button id="end_call" type="button" class="btn btn-danger btn-circle btn-lg "><span class="glyphicon glyphicon-earphone"></span></button></div>
+        <div class="col-md-2 col-xs-3"><button id="stop_video" type="button" class="btn btn-circle btn-lg white-button"><span class="glyphicon glyphicon-eye-open"></span></button></div>
+    </div>
+    <script>
+    $("#end_call").click(function() {
+        session.disconnect();
+        <% flash[:notice] = "Your call has been disconnected"  %>
+        window.location.href="/launchpad"
+    });
+
+
+    $("#mute_audio").click(function() {
+
+        $("span", this).toggleClass("glyphicon-volume-off glyphicon-volume-up");
+        if($( "#mute_audio span" ).hasClass( "glyphicon-volume-up" )) {
+            publisher.publishAudio(true)
+        }
+        else {
+            publisher.publishAudio(false)   
+        }
+    });
+
+    $("#stop_video").click(function() {
+
+        $("span", this).toggleClass("glyphicon-eye-close glyphicon-eye-open");
+        if($( "#stop_video span" ).hasClass( "glyphicon-eye-open" )) {
+            publisher.publishVideo(true)
+        }
+        else {
+            publisher.publishVideo(false)   
+        }
+    });
+
+
+
+
+ </script>

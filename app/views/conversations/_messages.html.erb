@@ -1,0 +1,23 @@
+<% @receipts.each do |receipt| %>
+    <% message = receipt.message %>
+    <div class="media">
+
+      <div class="media-body">
+        <h4 class="media-heading">
+          <%= message.sender.first_name+" "+message.sender.last_name %> <br>
+          <small><b>Subject: </b><%= message.subject %></small><br>
+          <small><b>Date: </b><%=  message.created_at.strftime("%A, %b %d, %Y at %I:%M%p") %></small>
+        </h4>
+        <div class="panel">
+        <%= message.body %>
+
+        <br>
+        <br>
+        <% if message.attachment? %>
+          <strong>Attachment</strong>
+          <%= link_to message.attachment.file.filename, message.attachment.url, target: :blank , :"download"=>message.attachment.file.filename%>
+        <% end %>
+        </div>      
+      </div>
+    </div>
+<% end %>

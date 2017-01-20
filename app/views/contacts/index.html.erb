@@ -1,0 +1,81 @@
+
+<div class="container contacts-container">
+<div class="container"><h1> </h1></div>
+<div id="exTab1">	
+	<ul  class="nav nav-pills nav-justified panel">
+			<li id = "b1a" class="active">
+        	<a  href="#1a" data-toggle="tab"><b>Physicians</b></a>
+			</li>
+
+			<% if current_user.role != "patient" %>
+				<li id = "b2a"><a href="#2a" data-toggle="tab"><b>Patients</b></a>
+				</li>
+			<% end %>
+
+			<li id = "b3a"><a href="#3a" data-toggle="tab"><b>All Physicians</b></a>
+			</li>
+  			
+  			<% if current_user.role != "patient" %>
+  				<li id = "b4a"><a href="#4a" data-toggle="tab"><b>All Patients</b></a>
+				</li>
+			<% end %>
+				
+	</ul>
+
+			<div class="tab-content clearfix">
+			  <div class="tab-pane active" id="1a">
+          			<%= render '/contacts/all_contacts_physicians' %>
+				</div>
+				<div class="tab-pane " id="2a">
+          			<%= render '/contacts/all_contacts_patients' %>
+				</div>
+        		<div class="tab-pane " id="3a">
+          			<%= render '/contacts/all_users_physicians' %>
+				</div>
+          		<div class="tab-pane " id="4a">
+          			<%= render '/contacts/all_users_patients' %>
+				</div>
+			</div>
+			<%= render 'dialog' %>
+</div>
+</span>
+<script>
+
+$(document).ready(function() {
+	
+	frag = window.location.search.split('frag=')[1]
+	if (!frag == false) {
+		$('#1a').removeClass('active');
+  		$('#2a').removeClass('active');
+  		$('#3a').removeClass('active');
+  		$('#4a').removeClass('active');
+
+
+  		$('#b1a').removeClass('active');
+  		$('#b2a').removeClass('active');
+  		$('#b3a').removeClass('active');
+  		$('#b4a').removeClass('active');
+
+  		$('#'+frag).addClass('active');
+  		$('#b'+frag).addClass('active');
+
+	}	
+
+ 
+
+
+	$('.dtable').DataTable({
+  	responsive: true,
+  autoWidth: true
+});
+
+   $('a[data-toggle="tab"]').on('shown.bs.tab', function(e){
+      $($.fn.dataTable.tables(true)).DataTable()
+         .columns.adjust()
+         .responsive.recalc();
+   }); 	
+});
+
+
+</script>
+

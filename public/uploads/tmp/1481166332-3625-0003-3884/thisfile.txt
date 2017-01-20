@@ -1,0 +1,3 @@
+50
+New Student 1 0
+New Student2 2 0
