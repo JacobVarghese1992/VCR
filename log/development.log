@@ -30407,3 +30407,2396 @@ Processing by CoursesController#index as HTML
 Completed 200 OK in 373ms (Views: 361.7ms | ActiveRecord: 1.9ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-01-21 01:33:42 -0500
+  [1m[36mUser Load (65.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Processing by PagesController#launchpad as HTML
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (38.8ms)
+  Rendered layouts/_nav_user.html.erb (0.8ms)
+  Rendered layouts/_nav_guest.html.erb (2.0ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 6908ms (Views: 6894.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-01-21 01:33:51 -0500
+Processing by CoursesController#index as HTML
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mRegistration Load (48.7ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.3ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.4ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendered courses/index.html.erb within layouts/application (20.1ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 511ms (Views: 415.7ms | ActiveRecord: 52.4ms)
+
+
+Started GET "/courses/webcast/2" for 127.0.0.1 at 2017-01-21 01:33:54 -0500
+Processing by CoursesController#webcast as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering courses/webcast.html.erb within layouts/application
+  Rendered courses/webcast.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_nav_user.html.erb (0.6ms)
+  Rendered layouts/_nav_guest.html.erb (1.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 410ms (Views: 382.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/courses/webcast/2" for 127.0.0.1 at 2017-01-21 01:36:16 -0500
+Processing by CoursesController#webcast as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering courses/webcast.html.erb within layouts/application
+  Rendered courses/webcast.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 343ms (Views: 339.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 01:36:22 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.5ms)
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 01:36:22 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (26.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (2.7ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 726ms (Views: 720.6ms | ActiveRecord: 2.2ms)
+
+
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 538ms (Views: 505.7ms | ActiveRecord: 26.8ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-01-21 01:36:25 -0500
+Processing by CoursesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.4ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.3ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendered courses/index.html.erb within layouts/application (10.4ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 364ms (Views: 355.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/courses/webcast/2" for 127.0.0.1 at 2017-01-21 01:36:27 -0500
+Processing by CoursesController#webcast as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.3ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering courses/webcast.html.erb within layouts/application
+  Rendered courses/webcast.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 356ms (Views: 341.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 01:39:23 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.5ms)
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 01:39:23 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (3.0ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 515ms (Views: 504.8ms | ActiveRecord: 2.8ms)
+
+
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 759ms (Views: 752.5ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-21 01:42:09 -0500
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Processing by PagesController#launchpad as HTML
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.4ms)
+Started GET "/" for 127.0.0.1 at 2017-01-21 01:42:09 -0500
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Processing by PagesController#launchpad as HTML
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_nav_user.html.erb (0.6ms)
+  Rendered layouts/_nav_guest.html.erb (1.5ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 649ms (Views: 648.7ms | ActiveRecord: 0.0ms)
+
+
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 482ms (Views: 481.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-01-21 01:42:12 -0500
+Processing by CoursesController#index as HTML
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mRegistration Load (1.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.1ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.1ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendered courses/index.html.erb within layouts/application (5.4ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 362ms (Views: 352.5ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/courses/webcast/2" for 127.0.0.1 at 2017-01-21 01:42:14 -0500
+Processing by CoursesController#webcast as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (4.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering courses/webcast.html.erb within layouts/application
+  Rendered courses/webcast.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 348ms (Views: 339.5ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/courses/webcast/2" for 127.0.0.1 at 2017-01-21 01:44:19 -0500
+Processing by CoursesController#webcast as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering courses/webcast.html.erb within layouts/application
+  Rendered courses/webcast.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_nav_user.html.erb (0.6ms)
+  Rendered layouts/_nav_guest.html.erb (1.5ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 2252ms (Views: 2247.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 01:44:30 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_nav_user.html.erb (0.8ms)
+  Rendered layouts/_nav_guest.html.erb (1.9ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 371ms (Views: 368.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-01-21 01:44:32 -0500
+Processing by CoursesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.3ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendered courses/index.html.erb within layouts/application (8.7ms)
+  Rendered layouts/_nav_user.html.erb (0.6ms)
+  Rendered layouts/_nav_guest.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 343ms (Views: 335.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/courses/webcast/2" for 127.0.0.1 at 2017-01-21 01:44:34 -0500
+Processing by CoursesController#webcast as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering courses/webcast.html.erb within layouts/application
+  Rendered courses/webcast.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 342ms (Views: 332.2ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 01:46:09 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 379ms (Views: 376.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 01:46:11 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 350ms (Views: 346.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-01-21 01:46:13 -0500
+Processing by CoursesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendered courses/index.html.erb within layouts/application (8.8ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 341ms (Views: 334.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/courses/webcast/2" for 127.0.0.1 at 2017-01-21 01:46:15 -0500
+Processing by CoursesController#webcast as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering courses/webcast.html.erb within layouts/application
+  Rendered courses/webcast.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 329ms (Views: 325.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 01:48:27 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 410ms (Views: 404.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-01-21 01:48:30 -0500
+Processing by CoursesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendered courses/index.html.erb within layouts/application (9.7ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 352ms (Views: 344.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/courses/webcast/2" for 127.0.0.1 at 2017-01-21 01:48:32 -0500
+Processing by CoursesController#webcast as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering courses/webcast.html.erb within layouts/application
+  Rendered courses/webcast.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 346ms (Views: 339.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 01:48:50 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 350ms (Views: 347.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 01:48:51 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 332ms (Views: 330.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-01-21 01:48:53 -0500
+Processing by CoursesController#index as HTML
+  [1m[36mUser Load (4.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mRegistration Load (2.1ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.1ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendered courses/index.html.erb within layouts/application (7.1ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 375ms (Views: 359.0ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/courses/webcast/2" for 127.0.0.1 at 2017-01-21 01:48:55 -0500
+Processing by CoursesController#webcast as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering courses/webcast.html.erb within layouts/application
+  Rendered courses/webcast.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 332ms (Views: 329.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/courses/webcast/2" for 127.0.0.1 at 2017-01-21 01:50:34 -0500
+Processing by CoursesController#webcast as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering courses/webcast.html.erb within layouts/application
+  Rendered courses/webcast.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 398ms (Views: 393.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 01:50:44 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.3ms)
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 01:50:44 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_nav_user.html.erb (0.6ms)
+  Rendered layouts/_nav_guest.html.erb (4.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 695ms (Views: 693.1ms | ActiveRecord: 0.2ms)
+
+
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 574ms (Views: 568.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-01-21 01:50:47 -0500
+Processing by CoursesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.1ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendered courses/index.html.erb within layouts/application (8.2ms)
+  Rendered layouts/_nav_user.html.erb (0.7ms)
+  Rendered layouts/_nav_guest.html.erb (1.8ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 351ms (Views: 345.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/courses/webcast/2" for 127.0.0.1 at 2017-01-21 01:50:49 -0500
+Processing by CoursesController#webcast as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering courses/webcast.html.erb within layouts/application
+  Rendered courses/webcast.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 355ms (Views: 347.2ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 01:53:33 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.4ms)
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 01:53:33 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_nav_user.html.erb (0.6ms)
+  Rendered layouts/_nav_guest.html.erb (2.6ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 670ms (Views: 668.0ms | ActiveRecord: 0.2ms)
+
+
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 551ms (Views: 537.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 01:53:40 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 353ms (Views: 349.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-01-21 01:53:42 -0500
+Processing by CoursesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.1ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendered courses/index.html.erb within layouts/application (6.4ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 411ms (Views: 404.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/courses/webcast/2" for 127.0.0.1 at 2017-01-21 01:53:44 -0500
+Processing by CoursesController#webcast as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering courses/webcast.html.erb within layouts/application
+  Rendered courses/webcast.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 329ms (Views: 322.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 01:57:33 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.3ms)
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 01:57:33 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_nav_user.html.erb (0.8ms)
+  Rendered layouts/_nav_guest.html.erb (4.4ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 705ms (Views: 699.7ms | ActiveRecord: 2.7ms)
+
+
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 539ms (Views: 533.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-01-21 01:58:02 -0500
+Processing by CoursesController#index as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.3ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendered courses/index.html.erb within layouts/application (9.9ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 387ms (Views: 376.6ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/courses/webcast/2" for 127.0.0.1 at 2017-01-21 01:58:04 -0500
+Processing by CoursesController#webcast as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering courses/webcast.html.erb within layouts/application
+  Rendered courses/webcast.html.erb within layouts/application (9.0ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 439ms (Views: 433.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 02:02:21 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 402ms (Views: 395.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 02:02:24 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_nav_user.html.erb (1.1ms)
+  Rendered layouts/_nav_guest.html.erb (2.4ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 350ms (Views: 346.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-01-21 02:02:26 -0500
+Processing by CoursesController#index as HTML
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendered courses/index.html.erb within layouts/application (8.8ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 369ms (Views: 359.0ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/courses/webcast/2" for 127.0.0.1 at 2017-01-21 02:02:28 -0500
+Processing by CoursesController#webcast as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering courses/webcast.html.erb within layouts/application
+  Rendered courses/webcast.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_nav_user.html.erb (0.7ms)
+  Rendered layouts/_nav_guest.html.erb (1.8ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 369ms (Views: 362.1ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 02:02:31 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 377ms (Views: 375.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-01-21 02:02:34 -0500
+Processing by CoursesController#index as HTML
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mRegistration Load (1.1ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendered courses/index.html.erb within layouts/application (9.1ms)
+  Rendered layouts/_nav_user.html.erb (0.4ms)
+  Rendered layouts/_nav_guest.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 363ms (Views: 353.1ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/courses/webcast/2" for 127.0.0.1 at 2017-01-21 02:02:36 -0500
+Processing by CoursesController#webcast as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering courses/webcast.html.erb within layouts/application
+  Rendered courses/webcast.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 349ms (Views: 344.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 02:02:50 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 358ms (Views: 350.9ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-01-21 02:02:53 -0500
+Processing by CoursesController#index as HTML
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.1ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendered courses/index.html.erb within layouts/application (6.0ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 365ms (Views: 355.6ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/courses/webcast/2" for 127.0.0.1 at 2017-01-21 02:02:54 -0500
+Processing by CoursesController#webcast as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering courses/webcast.html.erb within layouts/application
+  Rendered courses/webcast.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_nav_user.html.erb (0.7ms)
+  Rendered layouts/_nav_guest.html.erb (1.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 366ms (Views: 360.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 02:03:26 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_nav_user.html.erb (0.6ms)
+  Rendered layouts/_nav_guest.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 412ms (Views: 406.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 02:03:27 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (5.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 478ms (Views: 469.1ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-01-21 02:03:29 -0500
+Processing by CoursesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.1ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendered courses/index.html.erb within layouts/application (7.2ms)
+  Rendered layouts/_nav_user.html.erb (0.4ms)
+  Rendered layouts/_nav_guest.html.erb (1.1ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 327ms (Views: 321.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/courses/webcast/2" for 127.0.0.1 at 2017-01-21 02:03:31 -0500
+Processing by CoursesController#webcast as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering courses/webcast.html.erb within layouts/application
+  Rendered courses/webcast.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_nav_user.html.erb (0.6ms)
+  Rendered layouts/_nav_guest.html.erb (1.6ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 345ms (Views: 340.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 02:04:01 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.4ms)
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 02:04:02 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 608ms (Views: 605.9ms | ActiveRecord: 0.2ms)
+
+
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 543ms (Views: 537.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 02:04:03 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 346ms (Views: 343.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-01-21 02:04:05 -0500
+Processing by CoursesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.3ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.3ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendered courses/index.html.erb within layouts/application (10.1ms)
+  Rendered layouts/_nav_user.html.erb (0.4ms)
+  Rendered layouts/_nav_guest.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 348ms (Views: 340.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/courses/webcast/2" for 127.0.0.1 at 2017-01-21 02:04:07 -0500
+Processing by CoursesController#webcast as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering courses/webcast.html.erb within layouts/application
+  Rendered courses/webcast.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 328ms (Views: 324.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 02:06:37 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_nav_user.html.erb (0.6ms)
+  Rendered layouts/_nav_guest.html.erb (1.5ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 2173ms (Views: 2168.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-01-21 02:06:44 -0500
+Processing by CoursesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.3ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendered courses/index.html.erb within layouts/application (8.4ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 338ms (Views: 330.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/courses/webcast/2" for 127.0.0.1 at 2017-01-21 02:06:46 -0500
+Processing by CoursesController#webcast as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering courses/webcast.html.erb within layouts/application
+  Rendered courses/webcast.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 328ms (Views: 324.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 02:13:11 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 2106ms (Views: 2103.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-01-21 02:13:16 -0500
+Processing by CoursesController#index as HTML
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mRegistration Load (1.7ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.1ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendered courses/index.html.erb within layouts/application (7.5ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 405ms (Views: 393.4ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/courses/webcast/2" for 127.0.0.1 at 2017-01-21 02:13:22 -0500
+Processing by CoursesController#webcast as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering courses/webcast.html.erb within layouts/application
+  Rendered courses/webcast.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 370ms (Views: 365.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 02:16:45 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_nav_user.html.erb (0.8ms)
+  Rendered layouts/_nav_guest.html.erb (1.7ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 383ms (Views: 380.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-01-21 02:16:48 -0500
+Processing by CoursesController#index as HTML
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.7ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (1.1ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.1ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendered courses/index.html.erb within layouts/application (8.0ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 380ms (Views: 370.8ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/courses/webcast/2" for 127.0.0.1 at 2017-01-21 02:16:50 -0500
+Processing by CoursesController#webcast as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering courses/webcast.html.erb within layouts/application
+  Rendered courses/webcast.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 354ms (Views: 347.8ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 02:20:39 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.6ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 359ms (Views: 356.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-01-21 02:20:43 -0500
+Processing by CoursesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.1ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendered courses/index.html.erb within layouts/application (6.3ms)
+  Rendered layouts/_nav_user.html.erb (0.4ms)
+  Rendered layouts/_nav_guest.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 373ms (Views: 365.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/courses/webcast/2" for 127.0.0.1 at 2017-01-21 02:20:46 -0500
+Processing by CoursesController#webcast as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering courses/webcast.html.erb within layouts/application
+  Rendered courses/webcast.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 350ms (Views: 340.9ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/courses/webcast/2" for 127.0.0.1 at 2017-01-21 02:28:02 -0500
+Processing by CoursesController#webcast as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering courses/webcast.html.erb within layouts/application
+  Rendered courses/webcast.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 386ms (Views: 382.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 02:28:32 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.5ms)
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 02:28:32 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 664ms (Views: 660.9ms | ActiveRecord: 0.3ms)
+
+
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 537ms (Views: 531.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-01-21 02:28:35 -0500
+Processing by CoursesController#index as HTML
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.4ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (1.1ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.1ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendered courses/index.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 383ms (Views: 372.6ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/courses/webcast/2" for 127.0.0.1 at 2017-01-21 02:28:37 -0500
+Processing by CoursesController#webcast as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering courses/webcast.html.erb within layouts/application
+  Rendered courses/webcast.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_nav_user.html.erb (0.6ms)
+  Rendered layouts/_nav_guest.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 350ms (Views: 344.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 02:29:29 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_nav_user.html.erb (0.6ms)
+  Rendered layouts/_nav_guest.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 359ms (Views: 356.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-01-21 02:29:31 -0500
+Processing by CoursesController#index as HTML
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mRegistration Load (3.4ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendered courses/index.html.erb within layouts/application (8.0ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 371ms (Views: 357.5ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/courses/webcast/2" for 127.0.0.1 at 2017-01-21 02:29:33 -0500
+Processing by CoursesController#webcast as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering courses/webcast.html.erb within layouts/application
+  Rendered courses/webcast.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_nav_user.html.erb (0.6ms)
+  Rendered layouts/_nav_guest.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 377ms (Views: 367.8ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 02:31:01 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 388ms (Views: 385.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-01-21 02:31:06 -0500
+Processing by CoursesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.3ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.1ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendered courses/index.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 416ms (Views: 407.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/courses/webcast/2" for 127.0.0.1 at 2017-01-21 02:31:09 -0500
+Processing by CoursesController#webcast as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering courses/webcast.html.erb within layouts/application
+  Rendered courses/webcast.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_nav_user.html.erb (0.6ms)
+  Rendered layouts/_nav_guest.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 366ms (Views: 357.0ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 02:32:07 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.6ms)
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 02:32:07 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_nav_user.html.erb (1.9ms)
+  Rendered layouts/_nav_guest.html.erb (5.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 798ms (Views: 794.3ms | ActiveRecord: 0.7ms)
+
+
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 584ms (Views: 576.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 02:32:10 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 352ms (Views: 348.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-01-21 02:32:13 -0500
+Processing by CoursesController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.8ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.6ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendered courses/index.html.erb within layouts/application (7.8ms)
+  Rendered layouts/_nav_user.html.erb (0.4ms)
+  Rendered layouts/_nav_guest.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 345ms (Views: 334.6ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/courses/webcast/2" for 127.0.0.1 at 2017-01-21 02:32:15 -0500
+Processing by CoursesController#webcast as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering courses/webcast.html.erb within layouts/application
+  Rendered courses/webcast.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 335ms (Views: 329.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 02:33:26 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.7ms)
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 02:33:27 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 4040ms (Views: 4035.0ms | ActiveRecord: 0.5ms)
+
+
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 3904ms (Views: 3899.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 02:33:33 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 350ms (Views: 348.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-01-21 02:33:36 -0500
+Processing by CoursesController#index as HTML
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.3ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.1ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendered courses/index.html.erb within layouts/application (6.0ms)
+  Rendered layouts/_nav_user.html.erb (0.4ms)
+  Rendered layouts/_nav_guest.html.erb (1.1ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 344ms (Views: 331.3ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/courses/webcast/2" for 127.0.0.1 at 2017-01-21 02:33:38 -0500
+Processing by CoursesController#webcast as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering courses/webcast.html.erb within layouts/application
+  Rendered courses/webcast.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 358ms (Views: 351.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 02:34:05 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.5ms)
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 02:34:05 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.3ms)
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 02:34:06 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (24.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_nav_user.html.erb (0.6ms)
+  Rendered layouts/_nav_guest.html.erb (1.7ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 6190ms (Views: 6181.2ms | ActiveRecord: 2.7ms)
+
+
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (2.7ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 6142ms (Views: 6132.5ms | ActiveRecord: 0.2ms)
+
+
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 5872ms (Views: 5836.6ms | ActiveRecord: 24.1ms)
+
+
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 02:34:14 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 327ms (Views: 324.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-01-21 02:34:16 -0500
+Processing by CoursesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.4ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendered courses/index.html.erb within layouts/application (6.2ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 348ms (Views: 342.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/courses/webcast/2" for 127.0.0.1 at 2017-01-21 02:34:18 -0500
+Processing by CoursesController#webcast as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering courses/webcast.html.erb within layouts/application
+  Rendered courses/webcast.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_nav_user.html.erb (0.6ms)
+  Rendered layouts/_nav_guest.html.erb (1.5ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 356ms (Views: 347.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 02:34:37 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.4ms)
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 02:34:37 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (2.0ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 3874ms (Views: 3865.5ms | ActiveRecord: 0.9ms)
+
+
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 3781ms (Views: 3778.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 02:34:43 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 327ms (Views: 324.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-01-21 02:34:45 -0500
+Processing by CoursesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.1ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendered courses/index.html.erb within layouts/application (7.2ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 365ms (Views: 359.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/courses/webcast/2" for 127.0.0.1 at 2017-01-21 02:34:47 -0500
+Processing by CoursesController#webcast as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering courses/webcast.html.erb within layouts/application
+  Rendered courses/webcast.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 396ms (Views: 385.9ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 02:39:40 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_nav_user.html.erb (0.6ms)
+  Rendered layouts/_nav_guest.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 394ms (Views: 364.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-01-21 02:39:43 -0500
+Processing by CoursesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.1ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.3ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.1ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendered courses/index.html.erb within layouts/application (10.1ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 477ms (Views: 392.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/courses/webcast/2" for 127.0.0.1 at 2017-01-21 02:39:45 -0500
+Processing by CoursesController#webcast as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering courses/webcast.html.erb within layouts/application
+  Rendered courses/webcast.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 316ms (Views: 311.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 02:39:59 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 389ms (Views: 383.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2017-01-21 02:40:59 -0500
+Processing by ContactsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Started GET "/contacts" for 127.0.0.1 at 2017-01-21 02:41:01 -0500
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = ?[0m  [["role", "doctor"]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "contact_relationships" ON "users"."id" = "contact_relationships"."contact_id" WHERE "contact_relationships"."contacter_id" = ?[0m  [["contacter_id", 2]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = ?[0m  [["role", "patient"]]
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "contact_relationships" ON "users"."id" = "contact_relationships"."contact_id" WHERE "contact_relationships"."contacter_id" = ? AND "users"."role" = ?[0m  [["contacter_id", 2], ["role", "doctor"]]
+  Rendered contacts/_all_contacts_physicians.html.erb (2.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "contact_relationships" ON "users"."id" = "contact_relationships"."contact_id" WHERE "contact_relationships"."contacter_id" = ? AND "users"."role" = ?[0m  [["contacter_id", 2], ["role", "patient"]]
+  Rendered contacts/_all_contacts_patients.html.erb (1.1ms)
+  Rendered contacts/_all_users_physicians.html.erb (1.0ms)
+  Rendered contacts/_all_users_patients.html.erb (16.7ms)
+  Rendered contacts/_dialog.html.erb (0.3ms)
+  Rendered contacts/index.html.erb within layouts/application (26.0ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 2134ms (Views: 366.3ms | ActiveRecord: 2.5ms)
+
+
+Processing by ContactsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = ?[0m  [["role", "doctor"]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "contact_relationships" ON "users"."id" = "contact_relationships"."contact_id" WHERE "contact_relationships"."contacter_id" = ?[0m  [["contacter_id", 2]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = ?[0m  [["role", "patient"]]
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "contact_relationships" ON "users"."id" = "contact_relationships"."contact_id" WHERE "contact_relationships"."contacter_id" = ? AND "users"."role" = ?[0m  [["contacter_id", 2], ["role", "doctor"]]
+  Rendered contacts/_all_contacts_physicians.html.erb (1.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "contact_relationships" ON "users"."id" = "contact_relationships"."contact_id" WHERE "contact_relationships"."contacter_id" = ? AND "users"."role" = ?[0m  [["contacter_id", 2], ["role", "patient"]]
+  Rendered contacts/_all_contacts_patients.html.erb (0.5ms)
+  Rendered contacts/_all_users_physicians.html.erb (0.5ms)
+  Rendered contacts/_all_users_patients.html.erb (0.6ms)
+  Rendered contacts/_dialog.html.erb (0.0ms)
+  Rendered contacts/index.html.erb within layouts/application (5.7ms)
+  Rendered layouts/_nav_user.html.erb (0.2ms)
+  Rendered layouts/_nav_guest.html.erb (0.7ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 360ms (Views: 337.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 02:41:04 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.5ms)
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 02:41:04 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 664ms (Views: 661.7ms | ActiveRecord: 0.7ms)
+
+
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 488ms (Views: 486.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-01-21 02:41:06 -0500
+Processing by CoursesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.1ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.1ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.1ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendered courses/index.html.erb within layouts/application (9.8ms)
+  Rendered layouts/_nav_user.html.erb (0.6ms)
+  Rendered layouts/_nav_guest.html.erb (1.6ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 357ms (Views: 342.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/courses/webcast/2" for 127.0.0.1 at 2017-01-21 02:41:08 -0500
+Processing by CoursesController#webcast as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.7ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/courses_controller.rb:146:in `webcast'
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.6ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.1ms)
+Started PUT "/__web_console/repl_sessions/83a51d7b93ef2c98f041a31777498829" for 127.0.0.1 at 2017-01-21 02:41:21 -0500
+Started PUT "/__web_console/repl_sessions/83a51d7b93ef2c98f041a31777498829" for 127.0.0.1 at 2017-01-21 02:41:24 -0500
+Started PUT "/__web_console/repl_sessions/83a51d7b93ef2c98f041a31777498829" for 127.0.0.1 at 2017-01-21 02:41:26 -0500
+Started PUT "/__web_console/repl_sessions/83a51d7b93ef2c98f041a31777498829" for 127.0.0.1 at 2017-01-21 02:41:27 -0500
+Started PUT "/__web_console/repl_sessions/83a51d7b93ef2c98f041a31777498829" for 127.0.0.1 at 2017-01-21 02:41:31 -0500
+Started PUT "/__web_console/repl_sessions/83a51d7b93ef2c98f041a31777498829" for 127.0.0.1 at 2017-01-21 02:41:33 -0500
+Started PUT "/__web_console/repl_sessions/83a51d7b93ef2c98f041a31777498829" for 127.0.0.1 at 2017-01-21 02:41:34 -0500
+Started PUT "/__web_console/repl_sessions/83a51d7b93ef2c98f041a31777498829" for 127.0.0.1 at 2017-01-21 02:41:50 -0500
+Started GET "/" for 127.0.0.1 at 2017-01-21 02:42:31 -0500
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Processing by PagesController#launchpad as HTML
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (1.3ms)
+Started GET "/" for 127.0.0.1 at 2017-01-21 02:42:31 -0500
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 343ms (Views: 341.4ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Processing by PagesController#launchpad as HTML
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_nav_user.html.erb (0.6ms)
+  Rendered layouts/_nav_guest.html.erb (1.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 342ms (Views: 340.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-01-21 02:42:33 -0500
+Processing by CoursesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.1ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.1ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendered courses/index.html.erb within layouts/application (9.4ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 362ms (Views: 343.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/courses/webcast/2" for 127.0.0.1 at 2017-01-21 02:42:35 -0500
+Processing by CoursesController#webcast as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.5ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/courses_controller.rb:146:in `webcast'
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.3ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (16.6ms)
+Started GET "/" for 127.0.0.1 at 2017-01-21 02:43:14 -0500
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Processing by PagesController#launchpad as HTML
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.4ms)
+Started GET "/" for 127.0.0.1 at 2017-01-21 02:43:14 -0500
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 315ms (Views: 313.2ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Processing by PagesController#launchpad as HTML
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_nav_user.html.erb (0.6ms)
+  Rendered layouts/_nav_guest.html.erb (1.5ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 333ms (Views: 330.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-01-21 02:43:17 -0500
+Processing by CoursesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.1ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.1ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.1ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendered courses/index.html.erb within layouts/application (9.3ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 354ms (Views: 339.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/courses/webcast/2" for 127.0.0.1 at 2017-01-21 02:43:19 -0500
+Processing by CoursesController#webcast as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering courses/webcast.html.erb within layouts/application
+  Rendered courses/webcast.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 329ms (Views: 324.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 02:43:23 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_nav_user.html.erb (0.6ms)
+  Rendered layouts/_nav_guest.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 357ms (Views: 350.8ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 02:43:49 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 367ms (Views: 338.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-01-21 02:43:52 -0500
+Processing by CoursesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.1ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.1ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.1ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendered courses/index.html.erb within layouts/application (9.6ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 339ms (Views: 326.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/courses/webcast/2" for 127.0.0.1 at 2017-01-21 02:43:54 -0500
+Processing by CoursesController#webcast as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering courses/webcast.html.erb within layouts/application
+  Rendered courses/webcast.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 374ms (Views: 368.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 02:44:26 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.4ms)
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 02:44:26 -0500
+  Rendered layouts/_nav_user.html.erb (0.6ms)
+  Rendered layouts/_nav_guest.html.erb (1.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 352ms (Views: 334.6ms | ActiveRecord: 1.1ms)
+
+
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_nav_user.html.erb (0.6ms)
+  Rendered layouts/_nav_guest.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 339ms (Views: 323.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-01-21 02:44:28 -0500
+Processing by CoursesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.1ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.1ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.1ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendered courses/index.html.erb within layouts/application (9.3ms)
+  Rendered layouts/_nav_user.html.erb (0.6ms)
+  Rendered layouts/_nav_guest.html.erb (1.5ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 362ms (Views: 349.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/courses/webcast/2" for 127.0.0.1 at 2017-01-21 02:44:31 -0500
+Processing by CoursesController#webcast as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCourse Load (1.8ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering courses/webcast.html.erb within layouts/application
+  Rendered courses/webcast.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 331ms (Views: 320.1ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 02:44:51 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.4ms)
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 02:44:51 -0500
+  Rendered layouts/_nav_user.html.erb (0.6ms)
+  Rendered layouts/_nav_guest.html.erb (1.5ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 355ms (Views: 339.1ms | ActiveRecord: 1.0ms)
+
+
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_nav_user.html.erb (0.6ms)
+  Rendered layouts/_nav_guest.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 346ms (Views: 331.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 02:44:54 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 337ms (Views: 332.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-01-21 02:44:55 -0500
+Processing by CoursesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.1ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.1ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.1ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendered courses/index.html.erb within layouts/application (9.5ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 359ms (Views: 346.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/courses/webcast/2" for 127.0.0.1 at 2017-01-21 02:44:58 -0500
+Processing by CoursesController#webcast as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering courses/webcast.html.erb within layouts/application
+  Rendered courses/webcast.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_nav_user.html.erb (0.6ms)
+  Rendered layouts/_nav_guest.html.erb (1.6ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 334ms (Views: 327.1ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 02:46:37 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_nav_user.html.erb (0.9ms)
+  Rendered layouts/_nav_guest.html.erb (2.0ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 342ms (Views: 326.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-01-21 02:46:41 -0500
+Processing by CoursesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.1ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendered courses/index.html.erb within layouts/application (10.0ms)
+  Rendered layouts/_nav_user.html.erb (0.6ms)
+  Rendered layouts/_nav_guest.html.erb (1.6ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 383ms (Views: 362.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/courses/webcast/2" for 127.0.0.1 at 2017-01-21 02:46:44 -0500
+Processing by CoursesController#webcast as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCourse Load (1.0ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering courses/webcast.html.erb within layouts/application
+  Rendered courses/webcast.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_nav_user.html.erb (0.6ms)
+  Rendered layouts/_nav_guest.html.erb (1.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 336ms (Views: 324.2ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 02:48:09 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.6ms)
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 02:48:10 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_nav_user.html.erb (0.6ms)
+  Rendered layouts/_nav_guest.html.erb (1.6ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 622ms (Views: 616.4ms | ActiveRecord: 2.9ms)
+
+
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 512ms (Views: 508.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 02:48:12 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_nav_user.html.erb (0.6ms)
+  Rendered layouts/_nav_guest.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 347ms (Views: 338.5ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-01-21 02:48:14 -0500
+Processing by CoursesController#index as HTML
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.6ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.1ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendered courses/index.html.erb within layouts/application (6.7ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 360ms (Views: 348.5ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/courses/webcast/2" for 127.0.0.1 at 2017-01-21 02:48:16 -0500
+Processing by CoursesController#webcast as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering courses/webcast.html.erb within layouts/application
+  Rendered courses/webcast.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 328ms (Views: 324.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 02:48:40 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 346ms (Views: 337.6ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-01-21 02:48:44 -0500
+Processing by CoursesController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.1ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.1ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendered courses/index.html.erb within layouts/application (5.6ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 366ms (Views: 359.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/courses/webcast/2" for 127.0.0.1 at 2017-01-21 02:48:46 -0500
+Processing by CoursesController#webcast as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering courses/webcast.html.erb within layouts/application
+  Rendered courses/webcast.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 327ms (Views: 316.8ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/courses/webcast/2" for 127.0.0.1 at 2017-01-21 02:48:48 -0500
+Processing by CoursesController#webcast as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering courses/webcast.html.erb within layouts/application
+  Rendered courses/webcast.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_nav_user.html.erb (0.6ms)
+  Rendered layouts/_nav_guest.html.erb (1.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 360ms (Views: 353.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/courses/webcast/2" for 127.0.0.1 at 2017-01-21 02:48:52 -0500
+Processing by CoursesController#webcast as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering courses/webcast.html.erb within layouts/application
+  Rendered courses/webcast.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_nav_user.html.erb (0.6ms)
+  Rendered layouts/_nav_guest.html.erb (1.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 363ms (Views: 354.3ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/courses/webcast/2" for 127.0.0.1 at 2017-01-21 02:48:59 -0500
+Processing by CoursesController#webcast as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering courses/webcast.html.erb within layouts/application
+  Rendered courses/webcast.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_nav_user.html.erb (0.6ms)
+  Rendered layouts/_nav_guest.html.erb (1.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 375ms (Views: 366.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-21 02:49:15 -0500
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Processing by PagesController#launchpad as HTML
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.5ms)
+Started GET "/" for 127.0.0.1 at 2017-01-21 02:49:16 -0500
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Processing by PagesController#launchpad as HTML
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_nav_user.html.erb (0.6ms)
+  Rendered layouts/_nav_guest.html.erb (3.2ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 583ms (Views: 582.3ms | ActiveRecord: 0.0ms)
+
+
+  Rendered layouts/_nav_user.html.erb (0.6ms)
+  Rendered layouts/_nav_guest.html.erb (1.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 465ms (Views: 464.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-01-21 02:49:20 -0500
+Processing by CoursesController#index as HTML
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.5ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.4ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendered courses/index.html.erb within layouts/application (8.9ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 352ms (Views: 335.8ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/courses/webcast/2" for 127.0.0.1 at 2017-01-21 02:49:22 -0500
+Processing by CoursesController#webcast as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering courses/webcast.html.erb within layouts/application
+  Rendered courses/webcast.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_nav_user.html.erb (0.6ms)
+  Rendered layouts/_nav_guest.html.erb (1.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 365ms (Views: 355.9ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 02:50:44 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.8ms)
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 02:50:44 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_nav_user.html.erb (0.6ms)
+  Rendered layouts/_nav_guest.html.erb (4.8ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 616ms (Views: 608.9ms | ActiveRecord: 2.9ms)
+
+
+  Rendered layouts/_nav_user.html.erb (0.6ms)
+  Rendered layouts/_nav_guest.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 505ms (Views: 498.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-01-21 02:50:46 -0500
+Processing by CoursesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.1ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendered courses/index.html.erb within layouts/application (6.7ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 343ms (Views: 336.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/courses/webcast/2" for 127.0.0.1 at 2017-01-21 02:50:48 -0500
+Processing by CoursesController#webcast as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (5.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering courses/webcast.html.erb within layouts/application
+  Rendered courses/webcast.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_nav_user.html.erb (0.6ms)
+  Rendered layouts/_nav_guest.html.erb (1.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 339ms (Views: 328.2ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 02:51:33 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 359ms (Views: 348.6ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-01-21 02:51:49 -0500
+Processing by CoursesController#index as HTML
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.9ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendered courses/index.html.erb within layouts/application (6.9ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 370ms (Views: 360.0ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 02:51:53 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_nav_user.html.erb (0.6ms)
+  Rendered layouts/_nav_guest.html.erb (1.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 347ms (Views: 338.0ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2017-01-21 02:51:55 -0500
+Processing by ContactsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = ?[0m  [["role", "doctor"]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "contact_relationships" ON "users"."id" = "contact_relationships"."contact_id" WHERE "contact_relationships"."contacter_id" = ?[0m  [["contacter_id", 2]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = ?[0m  [["role", "patient"]]
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "contact_relationships" ON "users"."id" = "contact_relationships"."contact_id" WHERE "contact_relationships"."contacter_id" = ? AND "users"."role" = ?[0m  [["contacter_id", 2], ["role", "doctor"]]
+  Rendered contacts/_all_contacts_physicians.html.erb (1.8ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "contact_relationships" ON "users"."id" = "contact_relationships"."contact_id" WHERE "contact_relationships"."contacter_id" = ? AND "users"."role" = ?[0m  [["contacter_id", 2], ["role", "patient"]]
+  Rendered contacts/_all_contacts_patients.html.erb (1.9ms)
+  Rendered contacts/_all_users_physicians.html.erb (1.2ms)
+  Rendered contacts/_all_users_patients.html.erb (1.0ms)
+  Rendered contacts/_dialog.html.erb (0.3ms)
+  Rendered contacts/index.html.erb within layouts/application (9.7ms)
+  Rendered layouts/_nav_user.html.erb (0.6ms)
+  Rendered layouts/_nav_guest.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 362ms (Views: 352.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 02:52:02 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_nav_user.html.erb (0.6ms)
+  Rendered layouts/_nav_guest.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 366ms (Views: 358.0ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-01-21 02:52:04 -0500
+Processing by CoursesController#index as HTML
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendered courses/index.html.erb within layouts/application (8.7ms)
+  Rendered layouts/_nav_user.html.erb (0.6ms)
+  Rendered layouts/_nav_guest.html.erb (1.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 367ms (Views: 353.8ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/courses/webcast/2" for 127.0.0.1 at 2017-01-21 02:52:06 -0500
+Processing by CoursesController#webcast as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (6.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering courses/webcast.html.erb within layouts/application
+  Rendered courses/webcast.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_nav_user.html.erb (0.6ms)
+  Rendered layouts/_nav_guest.html.erb (1.6ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 374ms (Views: 363.0ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 02:53:02 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.6ms)
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 02:53:02 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_nav_user.html.erb (0.7ms)
+  Rendered layouts/_nav_guest.html.erb (2.9ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 426ms (Views: 418.1ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 02:53:03 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_nav_user.html.erb (0.7ms)
+  Rendered layouts/_nav_guest.html.erb (1.6ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 662ms (Views: 655.3ms | ActiveRecord: 2.6ms)
+
+
+  Rendered layouts/_nav_user.html.erb (0.6ms)
+  Rendered layouts/_nav_guest.html.erb (1.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 550ms (Views: 546.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2017-01-21 02:53:04 -0500
+Processing by ContactsController#index as HTML
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = ?[0m  [["role", "doctor"]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "contact_relationships" ON "users"."id" = "contact_relationships"."contact_id" WHERE "contact_relationships"."contacter_id" = ?[0m  [["contacter_id", 2]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = ?[0m  [["role", "patient"]]
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "contact_relationships" ON "users"."id" = "contact_relationships"."contact_id" WHERE "contact_relationships"."contacter_id" = ? AND "users"."role" = ?[0m  [["contacter_id", 2], ["role", "doctor"]]
+  Rendered contacts/_all_contacts_physicians.html.erb (3.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "contact_relationships" ON "users"."id" = "contact_relationships"."contact_id" WHERE "contact_relationships"."contacter_id" = ? AND "users"."role" = ?[0m  [["contacter_id", 2], ["role", "patient"]]
+  Rendered contacts/_all_contacts_patients.html.erb (2.1ms)
+  Rendered contacts/_all_users_physicians.html.erb (1.1ms)
+  Rendered contacts/_all_users_patients.html.erb (1.8ms)
+  Rendered contacts/_dialog.html.erb (0.4ms)
+  Rendered contacts/index.html.erb within layouts/application (13.0ms)
+  Rendered layouts/_nav_user.html.erb (0.6ms)
+  Rendered layouts/_nav_guest.html.erb (1.6ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 400ms (Views: 383.6ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 02:53:07 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_nav_user.html.erb (0.6ms)
+  Rendered layouts/_nav_guest.html.erb (1.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 344ms (Views: 341.0ms | ActiveRecord: 1.4ms)
+
+

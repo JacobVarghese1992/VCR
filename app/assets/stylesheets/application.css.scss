@@ -542,7 +542,7 @@ outline: none;
 }
 
 
-
+/*
 #textchat {
     position: relative;
     width: 20%;
@@ -605,4 +605,14 @@ input#quesTxt {
 #questionHistory .theirs {
     color: #00FFFF;
     margin-left: 10px;
+}
+*/
+
+#conversations_id {
+  width: 150% !important;
+}
+
+
+#questions_id {
+  width: 130% !important;
 }

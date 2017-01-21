@@ -2,6 +2,7 @@
         var apiKey = '<%= API_OPENTOK[:key] %>';
         var sessionId = '<%= @session_id %>';
         var token = '<%= @token %>';
+        user = '<%= @user %>';
 </script>
 
 <script src="/js/webcast.js"></script>
@@ -19,20 +20,61 @@
                 <div class="col-md-2 col-xs-3"><button id="stop_video" type="button" class="btn btn-circle btn-lg white-button"><span class="glyphicon glyphicon-eye-open"></span></button></div>
             </div>
         </div>
-        <div class="col-md-3 col-sm-3 col-xs-12">
-        <div class="row">
-            <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="col-md-3 col-sm-3 col-xs-">
+            <div class="row" id="conversations_id">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            Conversations
+                        </div>
+                        <div class="panel-body" style="min-height: 40vh; max-height: 40vh; overflow-y: scroll; overflow-wrap: break-word;">
+                            <div id="textchat">
+                                <p id="history"></p>
+                            </div>
+            <!--                 <form id="textForm">
+                            <input type="text" placeholder="Input your text here" id="msgTxt"></input>
+                            </form> -->
+                        </div>
 
-                <div id="textchat">
-                <p id="history"></p>
-                <form id="textForm">
-                <input type="text" placeholder="Input your text here" id="msgTxt"></input>
-                </form>
+                        <div class="panel-footer">
+                            <form id="textForm">
+                            <input type="text" placeholder="Input your text here" id="msgTxt" class="form-control"></input>
+                            </form>
+                        </div>
+
+                    </div>
                 </div>
-            </div>    
+            <!-- </div> -->
 
+
+            <!--<div hasClassss="col-md-3 col-sm-3 col-xs-">!-->
+            <!-- <div class="row" id="questions_id"> -->
             <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        Questions
+                    </div>
+                    <div class="panel-body" style="min-height: 20vh; max-height: 20vh; overflow-y: scroll; overflow-wrap: break-word;">
+                    <div id="questionChat">
+                    <p id="questionHistory"></p>
+    <!--                 <form id="textForm">
+                    <input type="text" placeholder="Input your text here" id="msgTxt"></input>
+                    </form> -->
+                    </div>
+                    </div>
 
+                    <div class="panel-footer">
+                        <form id="questionForm">
+                        <input type="text" placeholder="Input your question here" id="quesTxt" class="form-control"></input>
+                        </form>
+                    </div>
+            <!-- </div> -->
+                </div>
+            </div>
+        </div>
+            <!--<div class="col-md-3 col-sm-3 col-xs-">
+                <div class="panel-heading">jhdsahfjhdfhs</div>
+                <div class="panel-body" style="max-height: 10;">
                 <div id="questionChat">
                 <p id="questionHistory"></p>
                 <form id="questionForm">
@@ -40,6 +82,11 @@
                 </form>
                 </div>
                 </div>
+
+            </div>-->
+
+        </div>
+ 
 
         </div>    
     
@@ -88,7 +135,7 @@
 
       session.signal({
           type: 'msg',
-          data: /*'question: ' + */msgTxt.value
+          data: user + ':\n'+/*'question: ' + */msgTxt.value
         }, function(error) {
           if (!error) {
             msgTxt.value = '';
@@ -101,7 +148,7 @@
 
       session.signal({
           type: 'ques',
-          data: 'question: ' + quesTxt.value
+          data: 'Question from ' + user + ':\n'  + quesTxt.value
         }, function(error) {
           if (!error) {
             quesTxt.value = '';
