@@ -55,18 +55,18 @@
   <div class='row'>
 <!-- <div class="col-md-1 col-xs-3"><%= radio_button_tag(:gender, :male) %><%= label_tag(:gender, "Male") %></div>
   <div class="col-md-11 col-xs-6"><%= radio_button_tag(:gender, :female) %><%= label_tag(:gender, "Female") %></div> -->
-    <div class="col-md-1 col-xs-3"><%= f.radio_button(:gender, :male) %><%= label_tag(:gender, "Male") %></div>
+    <div class="col-md-1 col-xs-4"><%= f.radio_button(:gender, :male) %><%= label_tag(:gender, "Male") %></div>
     <div class="col-md-11 col-xs-6"><%= f.radio_button(:gender, :female) %><%= label_tag(:gender, "Female") %></div>
   </div>
   
   <div class='row'>
-    <div class="col-md-1 col-xs-3"><%= f.radio_button(:role, :doctor) %><%= label_tag(:role, "Doctor") %></div>
-    <div class="col-md-11 col-xs-6"><%= f.radio_button(:role, :patient) %><%= label_tag(:role, "Patient") %></div>
+    <div class="col-md-1 col-xs-4"><%= f.radio_button(:role, :doctor) %><%= label_tag(:role, "Instructor") %></div>
+    <div class="col-md-11 col-xs-6"><%= f.radio_button(:role, :patient) %><%= label_tag(:role, "Student") %></div>
   </div> 
 
   <br>
   <div classs="field">
-    <%= f.label :specialization, "Specialization" %><br />
+    <%= f.label :specialization, "Area of Interest" %><br />
     <%= f.text_field :specialization, class: 'form-control' %>
   </div>
 

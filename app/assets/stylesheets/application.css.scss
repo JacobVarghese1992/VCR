@@ -631,3 +631,7 @@ input#quesTxt {
   height: 100vh !important;
   width: 65% !important;
 }
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+      background-color: #448e68; 
+}

@@ -4,19 +4,19 @@
 <div id="exTab1">	
 	<ul  class="nav nav-pills nav-justified panel">
 			<li id = "b1a" class="active">
-        	<a  href="#1a" data-toggle="tab"><b>Physicians</b></a>
+        	<a  href="#1a" data-toggle="tab"><b>Instructors</b></a>
 			</li>
 
 			<% if current_user.role != "patient" %>
-				<li id = "b2a"><a href="#2a" data-toggle="tab"><b>Patients</b></a>
+				<li id = "b2a"><a href="#2a" data-toggle="tab"><b>Students</b></a>
 				</li>
 			<% end %>
 
-			<li id = "b3a"><a href="#3a" data-toggle="tab"><b>All Physicians</b></a>
+			<li id = "b3a"><a href="#3a" data-toggle="tab"><b>All Instructors</b></a>
 			</li>
   			
   			<% if current_user.role != "patient" %>
-  				<li id = "b4a"><a href="#4a" data-toggle="tab"><b>All Patients</b></a>
+  				<li id = "b4a"><a href="#4a" data-toggle="tab"><b>All Students</b></a>
 				</li>
 			<% end %>
 				

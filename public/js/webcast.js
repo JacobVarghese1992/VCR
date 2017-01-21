@@ -12,6 +12,7 @@ session.on({
   sessionConnected: function(event) {
     // Publish the publisher we initialzed earlier (this will trigger 'streamCreated' on other
     // clients)
+    // publisher.publishVideo(false) 
     session.publish(publisher);
   },
 
@@ -35,6 +36,16 @@ session.on('signal:msg', function(event) {
     msg.className = event.from.connectionId === session.connection.connectionId ? 'mine' : 'theirs';
     msgHistory.appendChild(msg);
     msg.scrollIntoView();
+  });
+
+session.on('signal:stop', function(event) {
+    console.log("Message Recieved");
+    publisher.publishVideo(false);
+  });
+
+session.on('signal:start', function(event) {
+    console.log("Message Recieved");
+    publisher.publishVideo(true);
   });
 
 session.on('signal:ques', function(event) {
