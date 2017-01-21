@@ -25,7 +25,7 @@
         <% else %>
           <td>Already Registered</td>
         <% end %>
-        <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', course, method: :delete %></td>
         
         <% if (@registrations.find_by_course_id(course.id) == nil) %>
           

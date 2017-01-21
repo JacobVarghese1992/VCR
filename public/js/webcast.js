@@ -29,6 +29,7 @@ session.on({
 });
 
 session.on('signal:msg', function(event) {
+    console.log("Message Recieved");
     var msg = document.createElement('p');
     msg.innerHTML = event.data;
     msg.className = event.from.connectionId === session.connection.connectionId ? 'mine' : 'theirs';
