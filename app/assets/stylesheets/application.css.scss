@@ -28,7 +28,7 @@
 
 
 .custom-blue {
-  color: #1a82d4;
+  color: #448e68;
 }
 
 .dummy {
@@ -48,7 +48,7 @@
     /*padding-top:calc(50% - 30px);*/
     padding-top: 25%;
     margin-right: 5%;
-    background-color: #1a82d4;
+    background-color: #448e68;
     color: white;
     font-size: x-large;
 
@@ -58,12 +58,12 @@
 a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
     color: white;
     text-decoration: inherit;
-    background-color: #6fadf3;
+    background-color: #337f30;
 }
 
 
 .navbar {
-	background-color: #1a82d4; 
+	background-color: #448e68; 
 }
 
 .navbar-brand {
@@ -77,8 +77,8 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
 .button-signup {
     border-style: solid;
     border-width: thin;
-    background-color: #6fadf3;
-    border-color: #6fadf3;
+    background-color: #337f30;
+    border-color: #337f30;
     color: white;
     width: 40%;
     height: 35px;
@@ -87,12 +87,12 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
 }
 
 .panel-home {
-  background-color: #1a82d4;
+  background-color: #448e68;
   color: white;
 }
 
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
-    background-color: #1a82d4;
+    background-color: #448e68;
     color: white;
     font-weight: bold;
 }
@@ -108,7 +108,7 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
 }
 
 .dropdown-menu-custom {
-      background-color: #6fadf3;
+      background-color: #337f30;
 }
 
 .class-white {
@@ -127,7 +127,7 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
 }
 
 .class-hover:hover {
-  background-color: #6fadf3 !important;
+  background-color: #337f30 !important;
   color: white !important;
   font-weight: bold !important; 
 
@@ -138,8 +138,8 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
 }*/
 
 .btn-primary {
-      background-color: #6fadf3;
-    border-color: #6fadf3;
+      background-color: #337f30;
+    border-color: #337f30;
 }
 
 /*flash*/
@@ -165,8 +165,8 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
  }
 
 .alert-notice {
-    background-color: #6fadf3;
-    border-color: #1a82d4;
+    background-color: #337f30;
+    border-color: #448e68;
     color: white;
     text-align: left;
  }
@@ -179,36 +179,36 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
  /*Autofill yellow*/
  input:-webkit-autofill {
   -webkit-text-fill-color: white;
-  -webkit-box-shadow: 0 0 0px 1000px #6fadf3 inset;
+  -webkit-box-shadow: 0 0 0px 1000px #337f30 inset;
 }
 input:-moz-autofill {
   -moz-text-fill-color: white;
-  -moz-box-shadow: 0 0 0px 1000px #6fadf3 inset;
+  -moz-box-shadow: 0 0 0px 1000px #337f30 inset;
 }
 input:-o-autofill {
   -o-text-fill-color: white;
-  -o-box-shadow: 0 0 0px 1000px #6fadf3 inset;
+  -o-box-shadow: 0 0 0px 1000px #337f30 inset;
 }
 input:-khtml-autofill {
   -khtml-text-fill-color: white;
-  -khtml-box-shadow: 0 0 0px 1000px #6fadf3 inset;
+  -khtml-box-shadow: 0 0 0px 1000px #337f30 inset;
 }
 
  input:focus:-webkit-autofill {
   -webkit-text-fill-color: white;
-  -webkit-box-shadow: 0 0 0px 1000px #6fadf3 inset;
+  -webkit-box-shadow: 0 0 0px 1000px #337f30 inset;
 }
 input:focus:-moz-autofill {
   -moz-text-fill-color: white;
-  -moz-box-shadow: 0 0 0px 1000px #6fadf3 inset;
+  -moz-box-shadow: 0 0 0px 1000px #337f30 inset;
 }
 input:focus:-o-autofill {
   -o-text-fill-color: white;
-  -o-box-shadow: 0 0 0px 1000px #6fadf3 inset;
+  -o-box-shadow: 0 0 0px 1000px #337f30 inset;
 }
 input:focus:-khtml-autofill {
   -khtml-text-fill-color: white;
-  -khtml-box-shadow: 0 0 0px 1000px #6fadf3 inset;
+  -khtml-box-shadow: 0 0 0px 1000px #337f30 inset;
 }
 
 /*tr.odd {
@@ -329,8 +329,8 @@ select {
 
 .white-button:hover{
     color: #fff;
-    background-color: #1a82d4;
-    border-color: #1a82d4;
+    background-color: #448e68;
+    border-color: #448e68;
     outline: none;
 }
 
@@ -340,7 +340,7 @@ select {
 
 
 table.dataTable.dtr-inline.collapsed > tbody > tr > td:first-child:before, table.dataTable.dtr-inline.collapsed > tbody > tr > th:first-child:before {
-    background-color: #1a82d4 !important;
+    background-color: #448e68 !important;
         border: 0px solid white;
     border-radius: 0px;
     top: 29%;
@@ -526,7 +526,7 @@ outline: none;
 .ui-draggable .ui-dialog-titlebar {
     cursor: move;
     background-color: white;
-    color: #1a82d4; 
+    color: #448e68; 
     border-color: white;
 }
 
@@ -536,7 +536,73 @@ outline: none;
 }
 
 .ui-dialog .ui-dialog-buttonpane button {
-    background-color: #6fadf3;
+    background-color: #337f30;
     color: white;
-    border: #6fadf3;
+    border: #337f30;
+}
+
+
+
+#textchat {
+    position: relative;
+    width: 20%;
+    float: right;
+    right: 0;
+    height: 100%;
+    background-color: #333;
+}
+
+#questionChat {
+    position: relative;
+    width: 20%;
+    float: right;
+    right: 0;
+    height: 100%;
+    background-color: #333;
+}
+
+#history {
+     width: 100%;
+     height: calc(100% - 100px);
+     overflow: auto;
+}
+
+#questionHistory {
+     width: 100%;
+     height: calc(100% - 100px);
+     overflow: auto;
+}
+
+input#msgTxt {
+    height: 20px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+input#quesTxt {
+    height: 20px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+#history .mine {
+    color: #00FF00;
+    text-align: right;
+    margin-right: 10px;
+}
+#history .theirs {
+    color: #00FFFF;
+    margin-left: 10px;
+}
+
+#questionHistory .mine {
+    color: #00FF00;
+    text-align: right;
+    margin-right: 10px;
+}
+#questionHistory .theirs {
+    color: #00FFFF;
+    margin-left: 10px;
 }

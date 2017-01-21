@@ -1,6 +1,7 @@
 
 Rails.application.routes.draw do
 
+  resources :courses
   resources :folders
   resources :assets
 
@@ -16,12 +17,20 @@ Rails.application.routes.draw do
     	root :to => 'devise/registrations#new'#, as: :unauthenticated_root
   	end
   end
-  	
+  
+  get '/courses/watch/:id' => 'courses#watch', as: :watch
+
+  get '/courses/attend/:id'	=> "courses#attend", as: :attend
+  # get "/courses/start_teaching/:id" => "courses#start_teaching", as: :start_teaching
+  # get "/courses/start_learning/:id" => "courses#start_learning", as: :start_learning
+  get "/courses/webcast/:id" => "courses#webcast", as: :start_teaching
+
   # Match routes for static pages
   get '/launchpad' => 'pages#launchpad'
   get '/add_push_session' => 'pages#add_push_session'
   get "/contacts/create_session/:id" => "contacts#create_session", as: :create_session
   post "/contacts/create_appointment/:id" => "contacts#create_appointment", as: :create_appointment
+
 
   post "/contacts/set_customer/:id" => "contacts#set_customer"
   get "/contacts/get_customer/:id" => "contacts#get_customer"

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161209200904) do
+ActiveRecord::Schema.define(version: 20170121032110) do
 
   create_table "appointments", force: :cascade do |t|
     t.integer  "initiator_id"
@@ -44,6 +44,14 @@ ActiveRecord::Schema.define(version: 20161209200904) do
     t.index ["contact_id"], name: "index_contact_relationships_on_contact_id"
     t.index ["contacter_id", "contact_id"], name: "index_contact_relationships_on_contacter_id_and_contact_id", unique: true
     t.index ["contacter_id"], name: "index_contact_relationships_on_contacter_id"
+  end
+
+  create_table "courses", force: :cascade do |t|
+    t.string   "course_id"
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "session_id"
   end
 
   create_table "folders", force: :cascade do |t|
@@ -126,6 +134,18 @@ ActiveRecord::Schema.define(version: 20161209200904) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_push_details_on_user_id"
+  end
+
+  create_table "registereds", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "registrations", force: :cascade do |t|
+    t.integer  "course_id"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "shared_folders", force: :cascade do |t|
