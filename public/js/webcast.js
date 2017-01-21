@@ -14,6 +14,9 @@ session.on({
     // clients)
     // publisher.publishVideo(false) 
     session.publish(publisher);
+    publisher.publishVideo(false);
+    var image = publisher.getImgData();
+    console.log(image);
   },
 
   // This function runs when another client publishes a stream (eg. session.publish())
