@@ -3,7 +3,7 @@ var session = TB.initSession(sessionId);
 
 // Initialize a Publisher, and place it into the element with id="publisher"
 var publisher = TB.initPublisher(apiKey, 'publisher');
-
+var msgHistory = document.querySelector('#history');
 // Attach event handlers
 session.on({
 
@@ -25,8 +25,15 @@ session.on({
     // Subscribe to the stream that caused this event, put it inside the container we just made
     session.subscribe(event.stream, subContainer);
   }
-
 });
+
+session.on('signal:msg', function(event) {
+    var msg = document.createElement('p');
+    msg.innerHTML = event.data;
+    msg.className = event.from.connectionId === session.connection.connectionId ? 'mine' : 'theirs';
+    msgHistory.appendChild(msg);
+    msg.scrollIntoView();
+  });
 
 // Connect to the Session using the 'apiKey' of the application and a 'token' for permission
 session.connect(apiKey, token);

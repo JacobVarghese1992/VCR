@@ -60,10 +60,10 @@ gem 'credit_card_validations'
 
 gem 'font-awesome-sass'
 
-gem 'simplecov', :require => false, :group => :test
-gem 'selenium-webdriver', :group => :test
+# gem 'simplecov', :require => false, :group => :test
+# gem 'selenium-webdriver', :group => :test
 
-gem "capybara-webkit", :group => :test
+# gem "capybara-webkit", :group => :test
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record
@@ -84,22 +84,22 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-group :production do
+# group :production do
 	
-	gem 'pg'
+# 	# gem 'pg'
 
-	gem 'rails_12factor'
+# 	gem 'rails_12factor'
 
-  gem 'newrelic_rpm'
+#   gem 'newrelic_rpm'
   
-end	
+# end	
 
-group :development, :test do
-  gem 'cucumber-rails', :require => false
-  gem 'cucumber-rails-training-wheels'
-  gem 'database_cleaner'
-  gem 'capybara'
-  gem 'launchy'
-end
+# group :development, :test do
+#   gem 'cucumber-rails', :require => false
+#   gem 'cucumber-rails-training-wheels'
+#   gem 'database_cleaner'
+#   gem 'capybara'
+#   gem 'launchy'
+# end
 
 #ruby "2.3.1"
