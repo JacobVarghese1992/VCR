@@ -1,3 +1,4 @@
+require "#{Rails.root}/app/controllers/push_notifications"
 class CoursesController < ApplicationController
   before_action :set_course, only: [:show, :edit, :update, :destroy]
 
@@ -165,6 +166,13 @@ class CoursesController < ApplicationController
     if (@session_id.empty?)
       redirect_to(:action => "index")   
     else
+
+      users = Course.find(params[:id]).users
+      users.each do |user|
+        notification = PushNotification.new("Course started", "Course #{course.name} has started", webcast_url(params[:id]), user.id)
+        notification.push()
+      end
+
       @token = opentok.generate_token(@session_id)
     end 
 

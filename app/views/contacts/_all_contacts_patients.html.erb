@@ -13,8 +13,8 @@
 		<th> Name </th>
 		<th> Location </th>
 		<th> Date of Birth </th>
-		<th> Message </th>
-		<th> Call </th>
+<!-- 		<th> Message </th>
+		<th> Call </th> -->
 		<th> Delete </th>
 		<th> Appointment </th>
 	</tr>
@@ -28,7 +28,7 @@
 			<td><%= "#{contact.location}" %></td>
 			<td><%= "#{contact.d_o_b.strftime('%m-%d-%Y')}" %></td>
 			<!-- Buttons -->
-			<td>
+<!-- 			<td>
 				<%=  link_to mail_session_path(contact), class: "btn btn-primary " do %>
     				<span class="glyphicon glyphicon-envelope "></span><span style="font-size: 0;">message</span>
 				<% end %>
@@ -37,7 +37,7 @@
 				<%= link_to create_session_path(contact), class: "btn btn-primary " do %>
     				<span class="glyphicon glyphicon-facetime-video"></span><span style="font-size: 0;">call</span>
 				<% end %>
-			</td>
+			</td> -->
 			<td>	
 				<%= link_to delete_contact_path(contact), class: "btn btn-primary " do %>
     				<span class="glyphicon glyphicon-trash "></span><span style="font-size: 0;">delete</span>

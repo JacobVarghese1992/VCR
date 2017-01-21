@@ -13,10 +13,10 @@
 		<th> Name </th>
 		<th> Location </th>
 		<th> Area of Interest </th>
-		<th> Message </th>
+<!-- 		<th> Message </th>
 		<% if current_user.role != "patient" %>
 			<th> Call </th>
-		<% end %>	
+		<% end %> -->	
 		
 		<th> Delete </th>
 
@@ -35,7 +35,7 @@
 			<td><%= "#{contact.location}" %></td>
 			<td><%= "#{contact.specialization}" %></td>
 			<!-- Buttons -->
-			<td>
+<!-- 			<td>
 				<%=  link_to mail_session_path(contact), class: "btn btn-primary " do %>
     				<span class="glyphicon glyphicon-envelope "></span>
 				<% end %>
@@ -47,7 +47,7 @@
     				<span class="glyphicon glyphicon-facetime-video"></span>
 				<% end %>
 			</td>
-			<% end %>
+			<% end %> -->
 
 
 			<td>	

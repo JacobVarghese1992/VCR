@@ -40435,3 +40435,791 @@ Processing by CoursesController#webcast as HTML
 Completed 200 OK in 346ms (Views: 341.7ms | ActiveRecord: 1.9ms)
 
 
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 09:09:00 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 372ms (Views: 365.7ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/add_push_session?token=eMxDM_99QJE:APA91bE9TV5S7ZsvxHb-wP5QqdGHbf5pkTSrhxPLmaPMFfpiDRycwsIvs49FhVESo36s9jumfpqxfFIXJTMN9Jizxsli2_i596r_STyP5tMmVZojUYxyAVh9jALCefv61pg7mvmGPimD" for 127.0.0.1 at 2017-01-21 09:09:01 -0500
+Processing by PagesController#add_push_session as HTML
+  Parameters: {"token"=>"eMxDM_99QJE:APA91bE9TV5S7ZsvxHb-wP5QqdGHbf5pkTSrhxPLmaPMFfpiDRycwsIvs49FhVESo36s9jumfpqxfFIXJTMN9Jizxsli2_i596r_STyP5tMmVZojUYxyAVh9jALCefv61pg7mvmGPimD"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPushDetail Load (0.1ms)[0m  [1m[34mSELECT "push_details".* FROM "push_details" WHERE "push_details"."user_id" = ?[0m  [["user_id", 2]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "push_details" WHERE "push_details"."id" = ?[0m  [["id", 64]]
+  [1m[35m (115.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "push_details" ("user_id", "token", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 2], ["token", "eMxDM_99QJE:APA91bE9TV5S7ZsvxHb-wP5QqdGHbf5pkTSrhxPLmaPMFfpiDRycwsIvs49FhVESo36s9jumfpqxfFIXJTMN9Jizxsli2_i596r_STyP5tMmVZojUYxyAVh9jALCefv61pg7mvmGPimD"], ["created_at", 2017-01-21 14:09:01 UTC], ["updated_at", 2017-01-21 14:09:01 UTC]]
+  [1m[35m (64.6ms)[0m  [1m[36mcommit transaction[0m
+  Rendering pages/launchpad_noajax.html.erb within layouts/application
+  Rendered pages/launchpad_noajax.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 554ms (Views: 366.4ms | ActiveRecord: 181.5ms)
+
+
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 09:09:10 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 363ms (Views: 353.0ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-21 11:13:13 -0500
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Processing by PagesController#launchpad as HTML
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 382ms (Views: 379.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/add_push_session?token=eMxDM_99QJE:APA91bE9TV5S7ZsvxHb-wP5QqdGHbf5pkTSrhxPLmaPMFfpiDRycwsIvs49FhVESo36s9jumfpqxfFIXJTMN9Jizxsli2_i596r_STyP5tMmVZojUYxyAVh9jALCefv61pg7mvmGPimD" for 127.0.0.1 at 2017-01-21 11:13:14 -0500
+Processing by PagesController#add_push_session as HTML
+  Parameters: {"token"=>"eMxDM_99QJE:APA91bE9TV5S7ZsvxHb-wP5QqdGHbf5pkTSrhxPLmaPMFfpiDRycwsIvs49FhVESo36s9jumfpqxfFIXJTMN9Jizxsli2_i596r_STyP5tMmVZojUYxyAVh9jALCefv61pg7mvmGPimD"}
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPushDetail Load (0.1ms)[0m  [1m[34mSELECT "push_details".* FROM "push_details" WHERE "push_details"."user_id" = ?[0m  [["user_id", 2]]
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (66.9ms)[0m  [1m[31mDELETE FROM "push_details" WHERE "push_details"."id" = ?[0m  [["id", 65]]
+  [1m[35m (101.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "push_details" ("user_id", "token", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 2], ["token", "eMxDM_99QJE:APA91bE9TV5S7ZsvxHb-wP5QqdGHbf5pkTSrhxPLmaPMFfpiDRycwsIvs49FhVESo36s9jumfpqxfFIXJTMN9Jizxsli2_i596r_STyP5tMmVZojUYxyAVh9jALCefv61pg7mvmGPimD"], ["created_at", 2017-01-21 16:13:14 UTC], ["updated_at", 2017-01-21 16:13:14 UTC]]
+  [1m[35m (82.6ms)[0m  [1m[36mcommit transaction[0m
+  Rendering pages/launchpad_noajax.html.erb within layouts/application
+  Rendered pages/launchpad_noajax.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_nav_user.html.erb (0.6ms)
+  Rendered layouts/_nav_guest.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 625ms (Views: 356.7ms | ActiveRecord: 256.0ms)
+
+
+Started GET "/assets" for 127.0.0.1 at 2017-01-21 11:13:37 -0500
+Processing by AssetsController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering assets/index.html.erb within layouts/application
+  [1m[36mAsset Load (0.2ms)[0m  [1m[34mSELECT "assets".* FROM "assets" WHERE "assets"."user_id" = ? AND (folder_id is NULL) ORDER BY uploaded_file_file_name desc[0m  [["user_id", 2]]
+  Rendered assets/_breadcrumbs.html.erb (0.5ms)
+  [1m[36mFolder Load (0.1ms)[0m  [1m[34mSELECT "folders".* FROM "folders" INNER JOIN "shared_folders" ON "folders"."id" = "shared_folders"."folder_id" WHERE "shared_folders"."shared_user_id" = ?[0m  [["shared_user_id", 2]]
+  [1m[36mFolder Load (0.1ms)[0m  [1m[34mSELECT "folders".* FROM "folders" WHERE "folders"."user_id" = ? AND "folders"."parent_id" IS NULL[0m  [["user_id", 2]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "contact_relationships" ON "users"."id" = "contact_relationships"."contact_id" WHERE "contact_relationships"."contacter_id" = ?[0m  [["contacter_id", 2]]
+  Rendered assets/index.html.erb within layouts/application (86.0ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 467ms (Views: 434.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 11:13:40 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 334ms (Views: 328.1ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2017-01-21 11:13:50 -0500
+Processing by ContactsController#index as HTML
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = ?[0m  [["role", "doctor"]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "contact_relationships" ON "users"."id" = "contact_relationships"."contact_id" WHERE "contact_relationships"."contacter_id" = ?[0m  [["contacter_id", 2]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = ?[0m  [["role", "patient"]]
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "contact_relationships" ON "users"."id" = "contact_relationships"."contact_id" WHERE "contact_relationships"."contacter_id" = ? AND "users"."role" = ?[0m  [["contacter_id", 2], ["role", "doctor"]]
+  Rendered contacts/_all_contacts_physicians.html.erb (3.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "contact_relationships" ON "users"."id" = "contact_relationships"."contact_id" WHERE "contact_relationships"."contacter_id" = ? AND "users"."role" = ?[0m  [["contacter_id", 2], ["role", "patient"]]
+  Rendered contacts/_all_contacts_patients.html.erb (2.9ms)
+  Rendered contacts/_all_users_physicians.html.erb (2.6ms)
+  Rendered contacts/_all_users_patients.html.erb (2.5ms)
+  Rendered contacts/_dialog.html.erb (0.7ms)
+  Rendered contacts/index.html.erb within layouts/application (90.9ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 501ms (Views: 484.2ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 11:14:12 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 349ms (Views: 342.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2017-01-21 11:14:13 -0500
+Processing by ContactsController#index as HTML
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = ?[0m  [["role", "doctor"]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "contact_relationships" ON "users"."id" = "contact_relationships"."contact_id" WHERE "contact_relationships"."contacter_id" = ?[0m  [["contacter_id", 2]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = ?[0m  [["role", "patient"]]
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "contact_relationships" ON "users"."id" = "contact_relationships"."contact_id" WHERE "contact_relationships"."contacter_id" = ? AND "users"."role" = ?[0m  [["contacter_id", 2], ["role", "doctor"]]
+  Rendered contacts/_all_contacts_physicians.html.erb (10.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "contact_relationships" ON "users"."id" = "contact_relationships"."contact_id" WHERE "contact_relationships"."contacter_id" = ? AND "users"."role" = ?[0m  [["contacter_id", 2], ["role", "patient"]]
+  Rendered contacts/_all_contacts_patients.html.erb (1.2ms)
+  Rendered contacts/_all_users_physicians.html.erb (0.8ms)
+  Rendered contacts/_all_users_patients.html.erb (0.8ms)
+  Rendered contacts/_dialog.html.erb (0.2ms)
+  Rendered contacts/index.html.erb within layouts/application (17.0ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 371ms (Views: 355.5ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2017-01-21 11:14:17 -0500
+Processing by ContactsController#index as HTML
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = ?[0m  [["role", "doctor"]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "contact_relationships" ON "users"."id" = "contact_relationships"."contact_id" WHERE "contact_relationships"."contacter_id" = ?[0m  [["contacter_id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = ?[0m  [["role", "patient"]]
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "contact_relationships" ON "users"."id" = "contact_relationships"."contact_id" WHERE "contact_relationships"."contacter_id" = ? AND "users"."role" = ?[0m  [["contacter_id", 2], ["role", "doctor"]]
+  Rendered contacts/_all_contacts_physicians.html.erb (1.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "contact_relationships" ON "users"."id" = "contact_relationships"."contact_id" WHERE "contact_relationships"."contacter_id" = ? AND "users"."role" = ?[0m  [["contacter_id", 2], ["role", "patient"]]
+  Rendered contacts/_all_contacts_patients.html.erb (1.1ms)
+  Rendered contacts/_all_users_physicians.html.erb (0.8ms)
+  Rendered contacts/_all_users_patients.html.erb (0.8ms)
+  Rendered contacts/_dialog.html.erb (0.2ms)
+  Rendered contacts/index.html.erb within layouts/application (7.9ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 351ms (Views: 339.6ms | ActiveRecord: 5.0ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-01-21 11:14:30 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"CduaQyKoRb/KkXoniFotb5OfJ4y5yRFda4jD0/D0pLbc6qIFZQ9K//kNsMclS6h1U4pJTjhxjnQsI+yNAWA74g=="}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-21 11:14:30 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (62.5ms)
+  Rendered layouts/_nav_new.html.erb (4.9ms)
+  Rendered layouts/_nav_guest.html.erb (27.3ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+Completed 200 OK in 476ms (Views: 475.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-01-21 11:14:34 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fp5ut7Pt0phJ8K2+kj5QT0936zixzExPfcTdA7EdiggZN3UeMU8DU/lM0+sEs9F32b7jwCtlQoewuCuUSKKy6Q==", "user"=>{"email"=>"jacobv1992@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mUser Load (6.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "jacobv1992@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (39.8ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2017-01-21 16:14:34 UTC], ["last_sign_in_at", 2017-01-21 11:46:21 UTC], ["sign_in_count", 12], ["updated_at", 2017-01-21 16:14:34 UTC], ["id", 1]]
+  [1m[35m (82.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 339ms (ActiveRecord: 129.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-21 11:14:34 -0500
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Processing by PagesController#launchpad as HTML
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 344ms (Views: 342.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/add_push_session?token=eMxDM_99QJE:APA91bE9TV5S7ZsvxHb-wP5QqdGHbf5pkTSrhxPLmaPMFfpiDRycwsIvs49FhVESo36s9jumfpqxfFIXJTMN9Jizxsli2_i596r_STyP5tMmVZojUYxyAVh9jALCefv61pg7mvmGPimD" for 127.0.0.1 at 2017-01-21 11:14:35 -0500
+Processing by PagesController#add_push_session as HTML
+  Parameters: {"token"=>"eMxDM_99QJE:APA91bE9TV5S7ZsvxHb-wP5QqdGHbf5pkTSrhxPLmaPMFfpiDRycwsIvs49FhVESo36s9jumfpqxfFIXJTMN9Jizxsli2_i596r_STyP5tMmVZojUYxyAVh9jALCefv61pg7mvmGPimD"}
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPushDetail Load (0.1ms)[0m  [1m[34mSELECT "push_details".* FROM "push_details" WHERE "push_details"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "push_details" WHERE "push_details"."id" = ?[0m  [["id", 50]]
+  [1m[35m (230.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "push_details" ("user_id", "token", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["token", "eMxDM_99QJE:APA91bE9TV5S7ZsvxHb-wP5QqdGHbf5pkTSrhxPLmaPMFfpiDRycwsIvs49FhVESo36s9jumfpqxfFIXJTMN9Jizxsli2_i596r_STyP5tMmVZojUYxyAVh9jALCefv61pg7mvmGPimD"], ["created_at", 2017-01-21 16:14:35 UTC], ["updated_at", 2017-01-21 16:14:35 UTC]]
+  [1m[35m (184.2ms)[0m  [1m[36mcommit transaction[0m
+  Rendering pages/launchpad_noajax.html.erb within layouts/application
+  Rendered pages/launchpad_noajax.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 808ms (Views: 378.0ms | ActiveRecord: 419.4ms)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2017-01-21 11:14:36 -0500
+Processing by ContactsController#index as HTML
+  [1m[36mUser Load (5.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = ?[0m  [["role", "doctor"]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "contact_relationships" ON "users"."id" = "contact_relationships"."contact_id" WHERE "contact_relationships"."contacter_id" = ?[0m  [["contacter_id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = ?[0m  [["role", "patient"]]
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "contact_relationships" ON "users"."id" = "contact_relationships"."contact_id" WHERE "contact_relationships"."contacter_id" = ? AND "users"."role" = ?[0m  [["contacter_id", 1], ["role", "doctor"]]
+  Rendered contacts/_all_contacts_physicians.html.erb (1.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "contact_relationships" ON "users"."id" = "contact_relationships"."contact_id" WHERE "contact_relationships"."contacter_id" = ? AND "users"."role" = ?[0m  [["contacter_id", 1], ["role", "patient"]]
+  Rendered contacts/_all_contacts_patients.html.erb (2.0ms)
+  Rendered contacts/_all_users_physicians.html.erb (0.8ms)
+  Rendered contacts/_all_users_patients.html.erb (0.8ms)
+  Rendered contacts/_dialog.html.erb (0.2ms)
+  Rendered contacts/index.html.erb within layouts/application (9.1ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 367ms (Views: 352.2ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2017-01-21 11:16:03 -0500
+Processing by ContactsController#index as HTML
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = ?[0m  [["role", "doctor"]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "contact_relationships" ON "users"."id" = "contact_relationships"."contact_id" WHERE "contact_relationships"."contacter_id" = ?[0m  [["contacter_id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = ?[0m  [["role", "patient"]]
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "contact_relationships" ON "users"."id" = "contact_relationships"."contact_id" WHERE "contact_relationships"."contacter_id" = ? AND "users"."role" = ?[0m  [["contacter_id", 1], ["role", "doctor"]]
+  Rendered contacts/_all_contacts_physicians.html.erb (1.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "contact_relationships" ON "users"."id" = "contact_relationships"."contact_id" WHERE "contact_relationships"."contacter_id" = ? AND "users"."role" = ?[0m  [["contacter_id", 1], ["role", "patient"]]
+  Rendered contacts/_all_contacts_patients.html.erb (2.3ms)
+  Rendered contacts/_all_users_physicians.html.erb (0.9ms)
+  Rendered contacts/_all_users_patients.html.erb (1.0ms)
+  Rendered contacts/_dialog.html.erb (0.2ms)
+  Rendered contacts/index.html.erb within layouts/application (9.2ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 360ms (Views: 351.4ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/contacts/7/edit" for 127.0.0.1 at 2017-01-21 11:16:18 -0500
+Processing by ContactsController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[32mINSERT INTO "contact_relationships" ("contacter_id", "contact_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["contacter_id", 1], ["contact_id", 7], ["created_at", 2017-01-21 16:16:18 UTC], ["updated_at", 2017-01-21 16:16:18 UTC]]
+  [1m[35m (143.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "contact_relationships" ("contacter_id", "contact_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["contacter_id", 7], ["contact_id", 1], ["created_at", 2017-01-21 16:16:18 UTC], ["updated_at", 2017-01-21 16:16:18 UTC]]
+  [1m[35m (93.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/contacts
+Completed 302 Found in 308ms (ActiveRecord: 267.7ms)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2017-01-21 11:16:19 -0500
+Processing by ContactsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = ?[0m  [["role", "doctor"]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "contact_relationships" ON "users"."id" = "contact_relationships"."contact_id" WHERE "contact_relationships"."contacter_id" = ?[0m  [["contacter_id", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = ?[0m  [["role", "patient"]]
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "contact_relationships" ON "users"."id" = "contact_relationships"."contact_id" WHERE "contact_relationships"."contacter_id" = ? AND "users"."role" = ?[0m  [["contacter_id", 1], ["role", "doctor"]]
+  Rendered contacts/_all_contacts_physicians.html.erb (2.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "contact_relationships" ON "users"."id" = "contact_relationships"."contact_id" WHERE "contact_relationships"."contacter_id" = ? AND "users"."role" = ?[0m  [["contacter_id", 1], ["role", "patient"]]
+  Rendered contacts/_all_contacts_patients.html.erb (2.9ms)
+  Rendered contacts/_all_users_physicians.html.erb (1.1ms)
+  Rendered contacts/_all_users_patients.html.erb (0.8ms)
+  Rendered contacts/_dialog.html.erb (0.2ms)
+  Rendered contacts/index.html.erb within layouts/application (12.4ms)
+  Rendered layouts/_nav_user.html.erb (0.6ms)
+  Rendered layouts/_nav_guest.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 380ms (Views: 364.8ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/contacts/create_appointment/2" for 127.0.0.1 at 2017-01-21 11:16:24 -0500
+Processing by ContactsController#create_appointment as JS
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (5.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contacts/create_appointment.js.erb
+  Rendered contacts/_form.html.erb (4.3ms)
+  Rendered contacts/create_appointment.js.erb (16.7ms)
+Completed 200 OK in 2011ms (Views: 25.4ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 11:16:30 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 353ms (Views: 344.9ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/add_push_session?token=eMxDM_99QJE:APA91bE9TV5S7ZsvxHb-wP5QqdGHbf5pkTSrhxPLmaPMFfpiDRycwsIvs49FhVESo36s9jumfpqxfFIXJTMN9Jizxsli2_i596r_STyP5tMmVZojUYxyAVh9jALCefv61pg7mvmGPimD" for 127.0.0.1 at 2017-01-21 11:16:30 -0500
+Processing by PagesController#add_push_session as HTML
+  Parameters: {"token"=>"eMxDM_99QJE:APA91bE9TV5S7ZsvxHb-wP5QqdGHbf5pkTSrhxPLmaPMFfpiDRycwsIvs49FhVESo36s9jumfpqxfFIXJTMN9Jizxsli2_i596r_STyP5tMmVZojUYxyAVh9jALCefv61pg7mvmGPimD"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPushDetail Load (0.1ms)[0m  [1m[34mSELECT "push_details".* FROM "push_details" WHERE "push_details"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "push_details" WHERE "push_details"."id" = ?[0m  [["id", 67]]
+  [1m[35m (200.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "push_details" ("user_id", "token", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["token", "eMxDM_99QJE:APA91bE9TV5S7ZsvxHb-wP5QqdGHbf5pkTSrhxPLmaPMFfpiDRycwsIvs49FhVESo36s9jumfpqxfFIXJTMN9Jizxsli2_i596r_STyP5tMmVZojUYxyAVh9jALCefv61pg7mvmGPimD"], ["created_at", 2017-01-21 16:16:30 UTC], ["updated_at", 2017-01-21 16:16:30 UTC]]
+  [1m[35m (113.9ms)[0m  [1m[36mcommit transaction[0m
+  Rendering pages/launchpad_noajax.html.erb within layouts/application
+  Rendered pages/launchpad_noajax.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 698ms (Views: 373.4ms | ActiveRecord: 315.3ms)
+
+
+Started GET "/add_push_session?token=eMxDM_99QJE:APA91bE9TV5S7ZsvxHb-wP5QqdGHbf5pkTSrhxPLmaPMFfpiDRycwsIvs49FhVESo36s9jumfpqxfFIXJTMN9Jizxsli2_i596r_STyP5tMmVZojUYxyAVh9jALCefv61pg7mvmGPimD" for 127.0.0.1 at 2017-01-21 11:17:22 -0500
+Processing by PagesController#add_push_session as HTML
+  Parameters: {"token"=>"eMxDM_99QJE:APA91bE9TV5S7ZsvxHb-wP5QqdGHbf5pkTSrhxPLmaPMFfpiDRycwsIvs49FhVESo36s9jumfpqxfFIXJTMN9Jizxsli2_i596r_STyP5tMmVZojUYxyAVh9jALCefv61pg7mvmGPimD"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPushDetail Load (0.1ms)[0m  [1m[34mSELECT "push_details".* FROM "push_details" WHERE "push_details"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "push_details" WHERE "push_details"."id" = ?[0m  [["id", 68]]
+  [1m[35m (154.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "push_details" ("user_id", "token", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["token", "eMxDM_99QJE:APA91bE9TV5S7ZsvxHb-wP5QqdGHbf5pkTSrhxPLmaPMFfpiDRycwsIvs49FhVESo36s9jumfpqxfFIXJTMN9Jizxsli2_i596r_STyP5tMmVZojUYxyAVh9jALCefv61pg7mvmGPimD"], ["created_at", 2017-01-21 16:17:22 UTC], ["updated_at", 2017-01-21 16:17:22 UTC]]
+  [1m[35m (94.6ms)[0m  [1m[36mcommit transaction[0m
+  Rendering pages/launchpad_noajax.html.erb within layouts/application
+  Rendered pages/launchpad_noajax.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_nav_user.html.erb (0.7ms)
+  Rendered layouts/_nav_guest.html.erb (1.7ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 723ms (Views: 462.5ms | ActiveRecord: 252.1ms)
+
+
+Started GET "/add_push_session?token=eMxDM_99QJE:APA91bE9TV5S7ZsvxHb-wP5QqdGHbf5pkTSrhxPLmaPMFfpiDRycwsIvs49FhVESo36s9jumfpqxfFIXJTMN9Jizxsli2_i596r_STyP5tMmVZojUYxyAVh9jALCefv61pg7mvmGPimD" for 127.0.0.1 at 2017-01-21 11:17:36 -0500
+Processing by PagesController#add_push_session as HTML
+  Parameters: {"token"=>"eMxDM_99QJE:APA91bE9TV5S7ZsvxHb-wP5QqdGHbf5pkTSrhxPLmaPMFfpiDRycwsIvs49FhVESo36s9jumfpqxfFIXJTMN9Jizxsli2_i596r_STyP5tMmVZojUYxyAVh9jALCefv61pg7mvmGPimD"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPushDetail Load (0.1ms)[0m  [1m[34mSELECT "push_details".* FROM "push_details" WHERE "push_details"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "push_details" WHERE "push_details"."id" = ?[0m  [["id", 69]]
+  [1m[35m (101.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "push_details" ("user_id", "token", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["token", "eMxDM_99QJE:APA91bE9TV5S7ZsvxHb-wP5QqdGHbf5pkTSrhxPLmaPMFfpiDRycwsIvs49FhVESo36s9jumfpqxfFIXJTMN9Jizxsli2_i596r_STyP5tMmVZojUYxyAVh9jALCefv61pg7mvmGPimD"], ["created_at", 2017-01-21 16:17:36 UTC], ["updated_at", 2017-01-21 16:17:36 UTC]]
+  [1m[35m (81.9ms)[0m  [1m[36mcommit transaction[0m
+  Rendering pages/launchpad_noajax.html.erb within layouts/application
+  Rendered pages/launchpad_noajax.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 567ms (Views: 373.2ms | ActiveRecord: 184.8ms)
+
+
+  [1m[36mRegistration Load (4.5ms)[0m  [1m[34mSELECT "registrations".* FROM "registrations"[0m
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."course_id" = ? LIMIT ?[0m  [["course_id", 3], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."course_id" = ? LIMIT ?[0m  [["course_id", 2], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."course_id" = ? LIMIT ?[0m  [["course_id", 4], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."course_id" = ? LIMIT ?[0m  [["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.1ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."course_id" = ? LIMIT ?[0m  [["course_id", 1], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."course_id" = ?[0m  [["course_id", 2]]
+  [1m[36mRegistration Load (0.4ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."course_id" = ? LIMIT ?[0m  [["course_id", 2], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.4ms)[0m  [1m[34mSELECT "registrations".* FROM "registrations"[0m
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."course_id" = ?[0m  [["course_id", 2]]
+Started GET "/" for 127.0.0.1 at 2017-01-21 11:34:17 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Processing by PagesController#launchpad as HTML
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (21.1ms)
+  Rendered layouts/_nav_user.html.erb (1.1ms)
+  Rendered layouts/_nav_guest.html.erb (3.0ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 15347ms (Views: 15259.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-21 11:34:41 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (252.7ms)
+  Rendered layouts/_nav_new.html.erb (2.9ms)
+  Rendered layouts/_nav_guest.html.erb (3.8ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 668ms (Views: 617.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-01-21 11:34:45 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4i6wP9lIhbrmsBZ8GyjE4ZYDg/MPr3i6WbdCIX3ssZSWXBWTHutj/LqVNvpBH1SZXBmsxUK+UEa8YrOIGG2K+Q==", "user"=>{"email"=>"jacobv1992@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "jacobv1992@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2017-01-21 16:34:46 UTC], ["last_sign_in_at", 2017-01-21 16:14:34 UTC], ["sign_in_count", 13], ["updated_at", 2017-01-21 16:34:46 UTC], ["id", 1]]
+  [1m[35m (92.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 408ms (ActiveRecord: 94.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-21 11:34:46 -0500
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Processing by PagesController#launchpad as HTML
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_nav_user.html.erb (0.6ms)
+  Rendered layouts/_nav_guest.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 367ms (Views: 364.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/add_push_session?token=eMxDM_99QJE:APA91bE9TV5S7ZsvxHb-wP5QqdGHbf5pkTSrhxPLmaPMFfpiDRycwsIvs49FhVESo36s9jumfpqxfFIXJTMN9Jizxsli2_i596r_STyP5tMmVZojUYxyAVh9jALCefv61pg7mvmGPimD" for 127.0.0.1 at 2017-01-21 11:34:46 -0500
+Processing by PagesController#add_push_session as HTML
+  Parameters: {"token"=>"eMxDM_99QJE:APA91bE9TV5S7ZsvxHb-wP5QqdGHbf5pkTSrhxPLmaPMFfpiDRycwsIvs49FhVESo36s9jumfpqxfFIXJTMN9Jizxsli2_i596r_STyP5tMmVZojUYxyAVh9jALCefv61pg7mvmGPimD"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPushDetail Load (0.2ms)[0m  [1m[34mSELECT "push_details".* FROM "push_details" WHERE "push_details"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "push_details" WHERE "push_details"."id" = ?[0m  [["id", 70]]
+  [1m[35m (150.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "push_details" ("user_id", "token", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["token", "eMxDM_99QJE:APA91bE9TV5S7ZsvxHb-wP5QqdGHbf5pkTSrhxPLmaPMFfpiDRycwsIvs49FhVESo36s9jumfpqxfFIXJTMN9Jizxsli2_i596r_STyP5tMmVZojUYxyAVh9jALCefv61pg7mvmGPimD"], ["created_at", 2017-01-21 16:34:47 UTC], ["updated_at", 2017-01-21 16:34:47 UTC]]
+  [1m[35m (112.3ms)[0m  [1m[36mcommit transaction[0m
+  Rendering pages/launchpad_noajax.html.erb within layouts/application
+  Rendered pages/launchpad_noajax.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 725ms (Views: 377.5ms | ActiveRecord: 264.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-21 11:34:55 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_nav_new.html.erb (1.4ms)
+  Rendered layouts/_nav_guest.html.erb (2.3ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 357ms (Views: 356.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-01-21 11:35:07 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jTd2OFNTA6W8K+HK0tn1oyQAbucDKyiwDkGvk8HljhPL/OIAnu/N2wwTHOLWrsVZhXSJYMmLYw0GBLlEWkCKzw==", "user"=>{"email"=>"user2@user2.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "user2@user2.com"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2017-01-21 16:35:08 UTC], ["last_sign_in_at", 2017-01-21 09:31:42 UTC], ["sign_in_count", 4], ["updated_at", 2017-01-21 16:35:08 UTC], ["id", 2]]
+  [1m[35m (77.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 223ms (ActiveRecord: 78.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-21 11:35:08 -0500
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Processing by PagesController#launchpad as HTML
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 365ms (Views: 362.9ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-01-21 11:35:24 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9KaO+Wvahc0mP9kk+1Q/Z0lOxyUFxp6hsT9zmhLNZrBEOH56daTUo9NNtqeSconV62cylknKL95OSbjkvnTWLQ=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 44ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-21 11:35:24 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (9.8ms)
+  Rendered layouts/_nav_new.html.erb (1.4ms)
+  Rendered layouts/_nav_guest.html.erb (2.2ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 364ms (Views: 362.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-01-21 11:35:42 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KQfWa7UI5huCVBNslKiphMb5E24A9AAlwz/0u4BE56hZbGqxOK5I4008/xH1qNf4AFF+2SAfBK2XPh0CdPEFlw==", "user"=>{"email"=>"user2@user2.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "user2@user2.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2017-01-21 16:35:43 UTC], ["last_sign_in_at", 2017-01-21 16:35:08 UTC], ["sign_in_count", 5], ["updated_at", 2017-01-21 16:35:43 UTC], ["id", 2]]
+  [1m[35m (96.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 239ms (ActiveRecord: 97.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-21 11:35:43 -0500
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Processing by PagesController#launchpad as HTML
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_nav_user.html.erb (0.6ms)
+  Rendered layouts/_nav_guest.html.erb (1.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 356ms (Views: 354.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/add_push_session?token=eMxDM_99QJE:APA91bE9TV5S7ZsvxHb-wP5QqdGHbf5pkTSrhxPLmaPMFfpiDRycwsIvs49FhVESo36s9jumfpqxfFIXJTMN9Jizxsli2_i596r_STyP5tMmVZojUYxyAVh9jALCefv61pg7mvmGPimD" for 127.0.0.1 at 2017-01-21 11:35:44 -0500
+Processing by PagesController#add_push_session as HTML
+  Parameters: {"token"=>"eMxDM_99QJE:APA91bE9TV5S7ZsvxHb-wP5QqdGHbf5pkTSrhxPLmaPMFfpiDRycwsIvs49FhVESo36s9jumfpqxfFIXJTMN9Jizxsli2_i596r_STyP5tMmVZojUYxyAVh9jALCefv61pg7mvmGPimD"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPushDetail Load (0.2ms)[0m  [1m[34mSELECT "push_details".* FROM "push_details" WHERE "push_details"."user_id" = ?[0m  [["user_id", 2]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[31mDELETE FROM "push_details" WHERE "push_details"."id" = ?[0m  [["id", 66]]
+  [1m[35m (165.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "push_details" ("user_id", "token", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 2], ["token", "eMxDM_99QJE:APA91bE9TV5S7ZsvxHb-wP5QqdGHbf5pkTSrhxPLmaPMFfpiDRycwsIvs49FhVESo36s9jumfpqxfFIXJTMN9Jizxsli2_i596r_STyP5tMmVZojUYxyAVh9jALCefv61pg7mvmGPimD"], ["created_at", 2017-01-21 16:35:44 UTC], ["updated_at", 2017-01-21 16:35:44 UTC]]
+  [1m[35m (83.3ms)[0m  [1m[36mcommit transaction[0m
+  Rendering pages/launchpad_noajax.html.erb within layouts/application
+  Rendered pages/launchpad_noajax.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 632ms (Views: 370.1ms | ActiveRecord: 251.9ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-01-21 11:35:56 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"WsqFnuOOhP4zdGRDTqINjhWw+7giWr+RbmjcY/02HSo5rd+9+uhfWvnGGhHG2x3uUgV232XUsqxRLwE6/ncJaw=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-21 11:35:56 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.7ms)
+  Rendered layouts/_nav_new.html.erb (1.4ms)
+  Rendered layouts/_nav_guest.html.erb (2.3ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 361ms (Views: 360.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-01-21 11:36:02 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NplDieMt4sYp2i7i8y2j6j/w+A/tB86j7Q/7ZbF30hWynvGE0IFrDp9GCNILN0J4i0xXaquGbNHDJVcE2E0m0Q==", "user"=>{"email"=>"jacobv1992@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "jacobv1992@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2017-01-21 16:36:02 UTC], ["last_sign_in_at", 2017-01-21 16:34:46 UTC], ["sign_in_count", 14], ["updated_at", 2017-01-21 16:36:02 UTC], ["id", 1]]
+  [1m[35m (134.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 279ms (ActiveRecord: 135.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-21 11:36:02 -0500
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Processing by PagesController#launchpad as HTML
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 448ms (Views: 445.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-01-21 11:36:06 -0500
+Processing by CoursesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.1ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 1], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 1], ["course_id", 3], ["LIMIT", 1]]
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 1], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 1], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 1], ["course_id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 1], ["course_id", 3], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 1], ["course_id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 1], ["course_id", 4], ["LIMIT", 1]]
+  Rendered courses/index.html.erb within layouts/application (14.2ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 411ms (Views: 364.6ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-01-21 11:36:14 -0500
+Processing by CoursesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.4ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.3ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.3ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 3], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 2], ["course_id", 4], ["LIMIT", 1]]
+  Rendered courses/index.html.erb within layouts/application (14.0ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 378ms (Views: 366.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/courses/webcast/3" for 127.0.0.1 at 2017-01-21 11:36:21 -0500
+Processing by CoursesController#webcast as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "courses" SET "session_id" = ?, "updated_at" = ? WHERE "courses"."id" = ?[0m  [["session_id", "1_MX40NTc1MzMzMn5-MTQ4NTAxNjU4Mjk0NH5abWx4VDBHNys0T3FUUktnRDNZRFhiMmJ-UH4"], ["updated_at", 2017-01-21 16:36:22 UTC], ["id", 3]]
+  [1m[35m (312.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "registrations" ON "users"."id" = "registrations"."user_id" WHERE "registrations"."course_id" = ?[0m  [["course_id", 3]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPushDetail Load (0.1ms)[0m  [1m[34mSELECT  "push_details".* FROM "push_details" WHERE "push_details"."user_id" = ? ORDER BY "push_details"."id" DESC LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPushDetail Load (0.4ms)[0m  [1m[34mSELECT  "push_details".* FROM "push_details" WHERE "push_details"."user_id" = ? ORDER BY "push_details"."id" DESC LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  Rendering courses/webcast.html.erb within layouts/application
+  Rendered courses/webcast.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 1526ms (Views: 401.2ms | ActiveRecord: 317.5ms)
+
+
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 11:36:37 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 365ms (Views: 360.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2017-01-21 11:38:10 -0500
+Processing by ContactsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = ?[0m  [["role", "doctor"]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "contact_relationships" ON "users"."id" = "contact_relationships"."contact_id" WHERE "contact_relationships"."contacter_id" = ?[0m  [["contacter_id", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = ?[0m  [["role", "patient"]]
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "contact_relationships" ON "users"."id" = "contact_relationships"."contact_id" WHERE "contact_relationships"."contacter_id" = ? AND "users"."role" = ?[0m  [["contacter_id", 1], ["role", "doctor"]]
+  Rendered contacts/_all_contacts_physicians.html.erb (2.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "contact_relationships" ON "users"."id" = "contact_relationships"."contact_id" WHERE "contact_relationships"."contacter_id" = ? AND "users"."role" = ?[0m  [["contacter_id", 1], ["role", "patient"]]
+  Rendered contacts/_all_contacts_patients.html.erb (3.1ms)
+  Rendered contacts/_all_users_physicians.html.erb (1.0ms)
+  Rendered contacts/_all_users_patients.html.erb (0.9ms)
+  Rendered contacts/_dialog.html.erb (0.3ms)
+  Rendered contacts/index.html.erb within layouts/application (12.7ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.9ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 375ms (Views: 332.3ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 11:38:15 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 360ms (Views: 357.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 11:38:15 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_nav_user.html.erb (0.6ms)
+  Rendered layouts/_nav_guest.html.erb (1.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 366ms (Views: 360.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-01-21 11:38:17 -0500
+Processing by CoursesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.5ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 1], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.3ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 1], ["course_id", 3], ["LIMIT", 1]]
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[36mRegistration Load (0.1ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 1], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 1], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 1], ["course_id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 1], ["course_id", 3], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 1], ["course_id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 1], ["course_id", 4], ["LIMIT", 1]]
+  Rendered courses/index.html.erb within layouts/application (9.1ms)
+  Rendered layouts/_nav_user.html.erb (0.4ms)
+  Rendered layouts/_nav_guest.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 359ms (Views: 345.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/courses/new" for 127.0.0.1 at 2017-01-21 11:38:44 -0500
+Processing by CoursesController#new as HTML
+  Rendering courses/new.html.erb within layouts/application
+  Rendered courses/_form.html.erb (5.4ms)
+  Rendered courses/new.html.erb within layouts/application (8.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_nav_user.html.erb (0.6ms)
+  Rendered layouts/_nav_guest.html.erb (2.8ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 386ms (Views: 361.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/launchpad" for 127.0.0.1 at 2017-01-21 11:38:46 -0500
+Processing by PagesController#launchpad as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/launchpad.html.erb within layouts/application
+  Rendered pages/launchpad.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_nav_user.html.erb (0.6ms)
+  Rendered layouts/_nav_guest.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 375ms (Views: 371.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-01-21 11:38:48 -0500
+Processing by CoursesController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 1], ["course_id", 1], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 1], ["course_id", 3], ["LIMIT", 1]]
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[36mRegistration Load (0.1ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 1], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 1], ["course_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 1], ["course_id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 1], ["course_id", 3], ["LIMIT", 1]]
+  [1m[36mRegistration Load (0.1ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 1], ["course_id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "registrations".* FROM "registrations" WHERE "registrations"."user_id" = ? AND "registrations"."course_id" = ? LIMIT ?[0m  [["user_id", 1], ["course_id", 4], ["LIMIT", 1]]
+  Rendered courses/index.html.erb within layouts/application (9.1ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav_guest.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 446ms (Views: 439.5ms | ActiveRecord: 2.2ms)
+
+
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m

@@ -264,8 +264,8 @@
 
     questionForm.addEventListener('submit', function(event) {
       event.preventDefault();
-
-      session.signal({
+      if (role == 'patient') {
+        session.signal({
           type: 'ques',
           data: 'Question from ' + user + ':\n'  + quesTxt.value
         }, function(error) {
@@ -273,6 +273,19 @@
             quesTxt.value = '';
           }
         });
+      } else {
+        session.signal({
+          type: 'ques',
+          data: 'Answer:\n'  + quesTxt.value
+        }, function(error) {
+          if (!error) {
+            quesTxt.value = '';
+          }
+        });
+
+
+      } 
+      
     });
 
 
