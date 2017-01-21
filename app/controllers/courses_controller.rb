@@ -167,11 +167,11 @@ class CoursesController < ApplicationController
       redirect_to(:action => "index")   
     else
 
-      users = Course.find(params[:id]).users
-      users.each do |user|
-        notification = PushNotification.new("Course started", "Course #{course.name} has started", webcast_url(params[:id]), user.id)
-        notification.push()
-      end
+      # users = Course.find(params[:id]).users
+      # users.each do |user|
+      #   notification = PushNotification.new("Course started", "Course #{course.name} has started", webcast_url(params[:id]), user.id)
+      #   notification.push()
+      # end
 
       @token = opentok.generate_token(@session_id)
     end 
