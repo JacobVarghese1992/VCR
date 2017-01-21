@@ -5,6 +5,7 @@ var session = TB.initSession(sessionId);
 var publisher = TB.initPublisher(apiKey, 'publisher');
 var msgHistory = document.querySelector('#history');
 var quesHistory = document.querySelector('#questionHistory');
+subscriber = null;
 // Attach event handlers
 session.on({
 
@@ -15,8 +16,10 @@ session.on({
     // publisher.publishVideo(false) 
     session.publish(publisher);
     publisher.publishVideo(false);
-    var image = publisher.getImgData();
-    console.log(image);
+    
+
+
+
   },
 
   // This function runs when another client publishes a stream (eg. session.publish())
@@ -28,7 +31,7 @@ session.on({
     document.getElementById('subscribers').appendChild(subContainer);
 
     // Subscribe to the stream that caused this event, put it inside the container we just made
-    session.subscribe(event.stream, subContainer);
+    subscriber = session.subscribe(event.stream, subContainer);
   }
 });
 
@@ -58,6 +61,21 @@ session.on('signal:ques', function(event) {
     quesHistory.appendChild(msg);
     msg.scrollIntoView();
   });
+
+session.on('signal:sht', function(event) {
+    if (role != 'patient') {
+      publisher.publishVideo(false);
+      var image = publisher.getImgData();
+      var a = document.createElement('a');
+      a.href = 'data:image/png;base64,'+image;
+      a.download = Date.now()+".png";
+      a.click();
+      a.remove();
+      publisher.publishVideo(true);    
+    }
+});
+
+
 
 // Connect to the Session using the 'apiKey' of the application and a 'token' for permission
 session.connect(apiKey, token);
