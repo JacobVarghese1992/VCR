@@ -16,6 +16,7 @@ session.on({
     // publisher.publishVideo(false) 
     session.publish(publisher);
     publisher.publishVideo(false);
+    publisher.publishAudio(false);
     
 
 
