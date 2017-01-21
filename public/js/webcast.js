@@ -28,7 +28,7 @@ session.on({
   }
 });
 
-session.on('signal:msg', function(event) {
+session.on('signal', function(event) {
     console.log("Message Recieved");
     var msg = document.createElement('p');
     msg.innerHTML = event.data;
