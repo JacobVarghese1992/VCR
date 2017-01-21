@@ -3,97 +3,189 @@
         var sessionId = '<%= @session_id %>';
         var token = '<%= @token %>';
         user = '<%= @user %>';
+        role = '<%= @role %>';
 </script>
 
 <script src="/js/webcast.js"></script>
-    <br>
-    <div class="row">
-        <div class="col-md-9 col-sm-9 col-xs-9">
+    <% if (@role == 'patient') %>
+        <br>
+        <div class="row">
+            <div class="col-md-9 col-sm-9 col-xs-9">
 
-            <div id="subscribers" style="height: 100vh; width: 65%;" ></div>
-            <br>
-            <div id="publisher"></div>
-            <div class="web-buttons row">
-                <div class="col-md-4 col-xs-2"></div>    
-                <div class="col-md-2 col-xs-3"><button id="mute_audio" type="button" class="btn btn-circle btn-lg white-button"><span class="glyphicon glyphicon-volume-up"></span></button></div>
-                <div class="col-md-2 col-xs-3"><button id="end_call" type="button" class="btn btn-danger btn-circle btn-lg "><span class="glyphicon glyphicon-earphone"></span></button></div>
-                <div class="col-md-2 col-xs-3"><button id="stop_video" type="button" class="btn btn-circle btn-lg white-button"><span class="glyphicon glyphicon-eye-open"></span></button></div>
+                <div id="subscribers" style="height: 100vh; width: 65%;" ></div>
+                <br>
+                <div id="publisher" style="visibility:hidden"></div>
+                <div class="web-buttons row">
+                    <div class="col-md-4 col-xs-2"></div>    
+                    <div class="col-md-2 col-xs-3"><button id="mute_audio" type="button" class="btn btn-circle btn-lg white-button"><span class="glyphicon glyphicon-volume-up"></span></button></div>
+                    <div class="col-md-2 col-xs-3"><button id="end_call" type="button" class="btn btn-danger btn-circle btn-lg "><span class="glyphicon glyphicon-earphone"></span></button></div>
+                    <div class="col-md-2 col-xs-3"><button id="stop_video" type="button" class="btn btn-circle btn-lg white-button"><span class="glyphicon glyphicon-eye-open"></span></button></div>
+                </div>
             </div>
-        </div>
-        <div class="col-md-3 col-sm-3 col-xs-">
-            <div class="row" id="conversations_id">
+            <div class="col-md-3 col-sm-3 col-xs-3">
+                <div class="row" id="conversations_id" style="margin-top: -50px;">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                Conversations
+                            </div>
+                            <div class="panel-body" style="min-height: 40vh; max-height: 40vh; overflow-y: scroll; overflow-wrap: break-word;">
+                                <div id="textchat">
+                                    <p id="history"></p>
+                                </div>
+                <!--                 <form id="textForm">
+                                <input type="text" placeholder="Input your text here" id="msgTxt"></input>
+                                </form> -->
+                            </div>
+
+                            <div class="panel-footer">
+                                <form id="textForm">
+                                <input type="text" placeholder="Input your text here" id="msgTxt" class="form-control"></input>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                <!-- </div> -->
+
+
+                <!--<div hasClassss="col-md-3 col-sm-3 col-xs-">!-->
+                <!-- <div class="row" id="questions_id"> -->
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="panel panel-primary">
                         <div class="panel-heading">
-                            Conversations
+                            Questions
                         </div>
-                        <div class="panel-body" style="min-height: 40vh; max-height: 40vh; overflow-y: scroll; overflow-wrap: break-word;">
-                            <div id="textchat">
-                                <p id="history"></p>
-                            </div>
-            <!--                 <form id="textForm">
-                            <input type="text" placeholder="Input your text here" id="msgTxt"></input>
-                            </form> -->
+                        <div class="panel-body" style="min-height: 20vh; max-height: 20vh; overflow-y: scroll; overflow-wrap: break-word;">
+                        <div id="questionChat">
+                        <p id="questionHistory"></p>
+        <!--                 <form id="textForm">
+                        <input type="text" placeholder="Input your text here" id="msgTxt"></input>
+                        </form> -->
+                        </div>
                         </div>
 
                         <div class="panel-footer">
-                            <form id="textForm">
-                            <input type="text" placeholder="Input your text here" id="msgTxt" class="form-control"></input>
+                            <form id="questionForm">
+                            <input type="text" placeholder="Input your question here" id="quesTxt" class="form-control"></input>
                             </form>
                         </div>
-
+                <!-- </div> -->
                     </div>
-                </div>
-            <!-- </div> -->
-
-
-            <!--<div hasClassss="col-md-3 col-sm-3 col-xs-">!-->
-            <!-- <div class="row" id="questions_id"> -->
-            <div class="col-md-12 col-sm-12 col-xs-12">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        Questions
-                    </div>
-                    <div class="panel-body" style="min-height: 20vh; max-height: 20vh; overflow-y: scroll; overflow-wrap: break-word;">
-                    <div id="questionChat">
-                    <p id="questionHistory"></p>
-    <!--                 <form id="textForm">
-                    <input type="text" placeholder="Input your text here" id="msgTxt"></input>
-                    </form> -->
-                    </div>
-                    </div>
-
-                    <div class="panel-footer">
-                        <form id="questionForm">
-                        <input type="text" placeholder="Input your question here" id="quesTxt" class="form-control"></input>
-                        </form>
-                    </div>
-            <!-- </div> -->
                 </div>
             </div>
-        </div>
-            <!--<div class="col-md-3 col-sm-3 col-xs-">
-                <div class="panel-heading">jhdsahfjhdfhs</div>
-                <div class="panel-body" style="max-height: 10;">
-                <div id="questionChat">
-                <p id="questionHistory"></p>
-                <form id="questionForm">
-                <input type="text" placeholder="Input your question here" id="quesTxt"></input>
-                </form>
+                <!--<div class="col-md-3 col-sm-3 col-xs-">
+                    <div class="panel-heading">jhdsahfjhdfhs</div>
+                    <div class="panel-body" style="max-height: 10;">
+                    <div id="questionChat">
+                    <p id="questionHistory"></p>
+                    <form id="questionForm">
+                    <input type="text" placeholder="Input your question here" id="quesTxt"></input>
+                    </form>
+                    </div>
+                    </div>
+
+                </div>-->
+
+            </div>
+     
+
+            </div>    
+        
+
+            </div>      
+        </div>  
+    <% else %>
+
+        <br>
+        <div class="row">
+            <div class="col-md-9 col-sm-9 col-xs-9">
+
+                <div id="publisher" style="height: 100vh !important; width: 65% !important;" ></div>
+                <br>
+                <div id="subscriber"></div>
+                <div class="web-buttons row">
+                    <div class="col-md-4 col-xs-2"></div>    
+                    <div class="col-md-2 col-xs-3"><button id="mute_audio" type="button" class="btn btn-circle btn-lg white-button"><span class="glyphicon glyphicon-volume-up"></span></button></div>
+                    <div class="col-md-2 col-xs-3"><button id="end_call" type="button" class="btn btn-danger btn-circle btn-lg "><span class="glyphicon glyphicon-earphone"></span></button></div>
+                    <div class="col-md-2 col-xs-3"><button id="stop_video" type="button" class="btn btn-circle btn-lg white-button"><span class="glyphicon glyphicon-eye-open"></span></button></div>
                 </div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-3">
+                <div class="row" id="conversations_id" style="margin-top: -50px;">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                Conversations
+                            </div>
+                            <div class="panel-body" style="min-height: 40vh; max-height: 40vh; overflow-y: scroll; overflow-wrap: break-word;">
+                                <div id="textchat">
+                                    <p id="history"></p>
+                                </div>
+                <!--                 <form id="textForm">
+                                <input type="text" placeholder="Input your text here" id="msgTxt"></input>
+                                </form> -->
+                            </div>
+
+                            <div class="panel-footer">
+                                <form id="textForm">
+                                <input type="text" placeholder="Input your text here" id="msgTxt" class="form-control"></input>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                <!-- </div> -->
+
+
+                <!--<div hasClassss="col-md-3 col-sm-3 col-xs-">!-->
+                <!-- <div class="row" id="questions_id"> -->
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            Questions
+                        </div>
+                        <div class="panel-body" style="min-height: 20vh; max-height: 20vh; overflow-y: scroll; overflow-wrap: break-word;">
+                        <div id="questionChat">
+                        <p id="questionHistory"></p>
+        <!--                 <form id="textForm">
+                        <input type="text" placeholder="Input your text here" id="msgTxt"></input>
+                        </form> -->
+                        </div>
+                        </div>
+
+                        <div class="panel-footer">
+                            <form id="questionForm">
+                            <input type="text" placeholder="Input your question here" id="quesTxt" class="form-control"></input>
+                            </form>
+                        </div>
+                <!-- </div> -->
+                    </div>
                 </div>
+            </div>
+                <!--<div class="col-md-3 col-sm-3 col-xs-">
+                    <div class="panel-heading">jhdsahfjhdfhs</div>
+                    <div class="panel-body" style="max-height: 10;">
+                    <div id="questionChat">
+                    <p id="questionHistory"></p>
+                    <form id="questionForm">
+                    <input type="text" placeholder="Input your question here" id="quesTxt"></input>
+                    </form>
+                    </div>
+                    </div>
 
-            </div>-->
+                </div>-->
 
-        </div>
- 
+            </div>
+     
 
-        </div>    
-    
+            </div>    
+        
 
-        </div>      
-    </div>  
+            </div>      
+        </div> 
 
+    <% end %> 
     <script>
     $("#end_call").click(function() {
         session.disconnect();
@@ -155,8 +247,6 @@
           }
         });
     });
-
-
 
 
  </script>

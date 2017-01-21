@@ -279,10 +279,10 @@ select {
 
 .OT_publisher {
     position:fixed !important;
-    top: 12vh !important;
-    width: 15vh !important;
-    height: 15vh !important;
-    left: 2vh !important;
+    top: 5vh !important;
+/*    width: 15vh !important;
+    height: 15vh !important;*/
+    left: 0vh !important;
 }
 
 .web-buttons {
@@ -467,8 +467,8 @@ outline: none;
 }
 
 .btn-darkblue {
-  background-color: #337ab7;
-  border-color: #337ab7;
+  background-color: #448e68;
+  border-color: #448e68;
 }
 .btn-file {
     position: relative;
@@ -615,4 +615,19 @@ input#quesTxt {
 
 #questions_id {
   width: 130% !important;
+}
+
+
+.panel-heading {
+      background-color: #448e68 !important;
+    border-color: #448e68 !important;
+}
+
+.panel-primary{
+    border-color: #448e68 !important;  
+}
+
+#publisher {
+  height: 100vh !important;
+  width: 65% !important;
 }

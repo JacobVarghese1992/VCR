@@ -144,6 +144,7 @@ class CoursesController < ApplicationController
     #   @token = opentok.generate_token(@session_id)
     # end  
       @user = current_user.first_name + ' ' + current_user.last_name  
+      @role = current_user.role
       opentok = OpenTok::OpenTok.new(API_OPENTOK[:key], API_OPENTOK[:secret])
     if current_user.role != "patient"
 
