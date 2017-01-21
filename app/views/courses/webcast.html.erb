@@ -191,7 +191,7 @@
     <script>
     $("#end_call").click(function() {
         session.disconnect();
-        <% flash[:notice] = "Your call has been disconnected"  %>
+        // <% flash[:notice] = "Your call has been disconnected"  %>
         window.location.href="/launchpad"
     });
 

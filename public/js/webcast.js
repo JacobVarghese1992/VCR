@@ -47,11 +47,13 @@ session.on('signal:msg', function(event) {
 session.on('signal:stop', function(event) {
     console.log("Message Recieved");
     publisher.publishVideo(false);
+    publisher.publishAudio(false);
   });
 
 session.on('signal:start', function(event) {
     console.log("Message Recieved");
     publisher.publishVideo(true);
+    publisher.publishAudio(true);
   });
 
 session.on('signal:ques', function(event) {
